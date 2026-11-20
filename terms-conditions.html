@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions - Dashrathnandan Shree Ram Foundation</title>
+    <link rel="icon" type="image/jpeg" href="logo.jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        saffron: {
+                            50: '#FFF8F0',
+                            100: '#FFEED6',
+                            200: '#FFD9A8',
+                            300: '#FFBF6E',
+                            400: '#FFA94D',
+                            500: '#FF9933',
+                            600: '#E67E1A',
+                            700: '#CC6600',
+                            800: '#994D00',
+                            900: '#663300'
+                        },
+                        deepred: {
+                            50: '#FFF1F1',
+                            100: '#FFE1E1',
+                            200: '#FFC7C7',
+                            300: '#FFA0A0',
+                            400: '#FF6B6B',
+                            500: '#DC2626',
+                            600: '#B91C1C',
+                            700: '#991B1B',
+                            800: '#7F1D1D',
+                            900: '#541C23'
+                        },
+                        gold: {
+                            50: '#FFFDF5',
+                            100: '#FFF9E5',
+                            200: '#FFF0BF',
+                            300: '#FFE48A',
+                            400: '#FFD700',
+                            500: '#D4A017',
+                            600: '#B8860B',
+                            700: '#8C6500'
+                        },
+                        cream: {
+                            50: '#FFFDF9',
+                            100: '#FDF8F0',
+                            200: '#F7EEDD'
+                        }
+                    },
+                    fontFamily: {
+                        playfair: ['"Playfair Display"', 'serif'],
+                        poppins: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #B91C1C 0%, #FF9933 50%, #D4A017 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #B91C1C 0%, #991B1B 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #991B1B 0%, #7F1D1D 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(185, 28, 28, 0.4);
+        }
+
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+
+<body class="bg-cream-50 text-gray-800 overflow-x-hidden flex flex-col min-h-screen">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div
+                        class="w-12 h-12 rounded-full overflow-hidden shadow-lg flex-shrink-0 border-2 border-saffron-400 bg-white">
+                        <img src="logo.jpeg" alt="Dashrathnandan Shree Ram Foundation Logo"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h1 class="font-playfair font-bold text-base sm:text-lg md:text-xl gradient-text leading-tight">
+                            Dashrathnandan Shree Ram</h1>
+                        <p class="text-xs text-gray-500 font-medium tracking-wider uppercase">Foundation</p>
+                    </div>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html#home" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Home</a>
+                    <a href="index.html#about" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">About Us</a>
+                    <a href="index.html#work" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Our Work</a>
+                    <a href="index.html#gallery" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Gallery</a>
+                    <a href="index.html#donate" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Donate</a>
+                    <a href="index.html#contact" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Contact</a>
+                    <a href="index.html#donate"
+                        class="btn-primary text-white px-6 py-2.5 rounded-full font-semibold shadow-lg flex items-center space-x-2">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Donate Now</span>
+                    </a>
+                </div>
+
+                <button id="mobileMenuBtn" class="lg:hidden p-2 text-gray-700 hover:text-deepred-600">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-72 bg-white shadow-2xl lg:hidden z-50">
+            <div class="p-6 border-b border-gray-100 flex justify-between items-center">
+                <h3 class="font-playfair font-bold text-lg gradient-text">Menu</h3>
+                <button id="closeMenuBtn" class="p-2 text-gray-500 hover:text-deepred-600">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+            <div class="p-6 flex flex-col space-y-5">
+                <a href="index.html#home"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
+                        class="fa-solid fa-house text-saffron-500"></i><span>Home</span></a>
+                <a href="index.html#about"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
+                        class="fa-solid fa-circle-info text-saffron-500"></i><span>About Us</span></a>
+                <a href="index.html#work"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
+                        class="fa-solid fa-hands-holding text-saffron-500"></i><span>Our Work</span></a>
+                <a href="index.html#gallery"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
+                        class="fa-solid fa-images text-saffron-500"></i><span>Gallery</span></a>
+                <a href="index.html#donate"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
+                        class="fa-solid fa-hand-holding-heart text-saffron-500"></i><span>Donate</span></a>
+                <a href="index.html#contact"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
+                        class="fa-solid fa-envelope text-saffron-500"></i><span>Contact</span></a>
+                <a href="index.html#donate"
+                    class="btn-primary text-white px-6 py-3 rounded-full font-semibold text-center mt-4 flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Donate Now</span>
+                </a>
+            </div>
+        </div>
+        <div id="menuOverlay" class="hidden fixed inset-0 bg-black/40 z-40 lg:hidden"></div>
+    </header>
+
+    <!-- Page Title & Breadcrumb -->
+    <div class="pt-28 pb-10 bg-gradient-to-r from-deepred-900 via-deepred-800 to-saffron-800 text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex items-center space-x-2 text-xs sm:text-sm text-gold-200 mb-3">
+                <a href="index.html" class="hover:underline">Home</a>
+                <span>/</span>
+                <span class="text-white font-medium">Terms & Conditions</span>
+            </nav>
+            <h1 class="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold mb-2">Terms & Conditions</h1>
+            <p class="text-white/80 text-sm sm:text-base">Rules, guidelines, and legal terms governing the use of Dashrathnandan Shree Ram Foundation platform</p>
+        </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-gray-100 space-y-8 text-gray-700 leading-relaxed text-sm sm:text-base">
+
+            <!-- Organization Badge -->
+            <div class="bg-gradient-to-r from-saffron-50 via-cream-50 to-deepred-50 p-5 rounded-2xl border border-saffron-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-lg">Dashrathnandan Shree Ram Foundation</h3>
+                    <p class="text-xs sm:text-sm text-gray-600 mt-1">Section 8 Non-Profit Company (Companies Act, 2013 | MCA Govt. of India)</p>
+                    <p class="text-xs text-gray-500 font-mono mt-0.5">CIN: U88900RJ2026NPL112929 | PAN: AAMCD5868J | NITI Aayog: RJ/2026/1150915</p>
+                </div>
+                <div class="inline-flex items-center px-3.5 py-1.5 rounded-full bg-saffron-100 text-saffron-800 text-xs font-semibold">
+                    <i class="fa-solid fa-scale-balanced mr-1.5"></i> Governing Terms
+                </div>
+            </div>
+
+            <!-- Section 1 -->
+            <section class="space-y-3">
+                <h2 class="font-playfair text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
+                    <span class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">1</span>
+                    Acceptance of Terms
+                </h2>
+                <p>
+                    Welcome to the official website of <strong>Dashrathnandan Shree Ram Foundation</strong>. By accessing or browsing this website, participating in our social welfare programs, or making voluntary donations, you agree to be bound by these Terms and Conditions and our Privacy and Refund policies.
+                </p>
+                <p>
+                    If you do not agree with any part of these terms, please refrain from using our website or submitting contributions through our donation channels.
+                </p>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="space-y-3">
+                <h2 class="font-playfair text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
+                    <span class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">2</span>
+                    Nature of Charitable Contributions
+                </h2>
+                <p>
+                    All monetary contributions made to Dashrathnandan Shree Ram Foundation are purely voluntary donations made out of compassion and goodwill without any expectation of commercial exchange, goods, services, or personal favors in return.
+                </p>
+                <p>
+                    Donated funds are allocated exclusively toward our registered non-profit charitable activities:
+                </p>
+                <ul class="list-disc pl-6 space-y-1.5 text-gray-600">
+                    <li><strong>Annadaanam:</strong> Free satvik food distribution, daily langars, and seasonal bhandaras for slum children and the needy.</li>
+                    <li><strong>Gaushala & Animal Welfare:</strong> Fodder, veterinary medical treatment, rescue, and shelter for cows and street animals.</li>
+                    <li><strong>Child Education:</strong> Distribution of educational supplies, notebooks, stationery, and learning support for underprivileged children.</li>
+                    <li><strong>Medical Assistance:</strong> Free health checkup camps, essential medicines, and patient support.</li>
+                </ul>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="space-y-3">
+                <h2 class="font-playfair text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
+                    <span class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">3</span>
+                    Donation Receipts & 80G Tax Exemption
+                </h2>
+                <ul class="list-disc pl-6 space-y-2 text-gray-600">
+                    <li>An official digital donation receipt is generated and issued for every verified donation received by our Foundation.</li>
+                    <li>To claim tax deductions under <strong>Section 80G</strong> of the Income Tax Act, 1961, the donor must provide a valid Permanent Account Number (PAN) at the time of donation submission.</li>
+                    <li>In accordance with Central Board of Direct Taxes (CBDT) notifications, donor PAN data is filed annually in Form 10BD, enabling donors to download their official Form 10BE tax certificate directly from the Income Tax e-filing portal.</li>
+                    <li>The Foundation bears no responsibility for rejected tax exemption claims resulting from incorrect PAN or donor name information supplied by the donor.</li>
+                </ul>
+            </section>
+
+            <!-- Section 4 -->
+            <section class="space-y-3">
+                <h2 class="font-playfair text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
+                    <span class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">4</span>
+                    Intellectual Property Rights
+                </h2>
+                <p>
+                    All content on this website, including texts, photographs of social drives, videos, logos, graphics, and branding emblems, is the intellectual property of Dashrathnandan Shree Ram Foundation.
+                </p>
+                <p>
+                    Unauthorized copying, reproduction, distribution, or commercial exploitation of any material without our explicit written permission is strictly prohibited.
+                </p>
+            </section>
+
+            <!-- Section 5 -->
+            <section class="space-y-3">
+                <h2 class="font-playfair text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
+                    <span class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">5</span>
+                    Prohibited Activities
+                </h2>
+                <p>Users of this website agree not to:</p>
+                <ul class="list-disc pl-6 space-y-1.5 text-gray-600">
+                    <li>Use this website or our name for fraudulent fundraising or unauthorized third-party collections.</li>
+                    <li>Submit forged, stolen, or false transaction/UTR IDs in donation verification forms.</li>
+                    <li>Interfere with website server security, deploy harmful scripts, or overload payment channels.</li>
+                </ul>
+            </section>
+
+            <!-- Section 6 -->
+            <section class="space-y-3">
+                <h2 class="font-playfair text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
+                    <span class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">6</span>
+                    Governing Law & Legal Jurisdiction
+                </h2>
+                <p>
+                    These Terms and Conditions shall be governed by and construed in accordance with the laws of the Republic of India. Any legal dispute, controversy, or claim arising out of or relating to this website or donations shall be subject to the exclusive jurisdiction of the competent courts in <strong>Jaipur, Rajasthan, India</strong>.
+                </p>
+            </section>
+
+            <!-- Section 7 -->
+            <section class="space-y-3">
+                <h2 class="font-playfair text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
+                    <span class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">7</span>
+                    Registered Office & Legal Inquiries
+                </h2>
+                <div class="bg-gray-50 p-5 rounded-2xl border border-gray-200 text-sm space-y-1.5">
+                    <p><strong>Dashrathnandan Shree Ram Foundation</strong></p>
+                    <p><i class="fa-solid fa-location-dot text-deepred-600 mr-2"></i> 13A, Narvar Puri Colony, Outside Gangapole Gate, Tripolia Bazar, Jaipur, Rajasthan - 302002</p>
+                    <p><i class="fa-solid fa-phone text-saffron-600 mr-2"></i> +91 95496 23048 / +91 99820 32207</p>
+                    <p><i class="fa-solid fa-envelope text-gold-600 mr-2"></i> dns.shreeramfoundation@gmail.com</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-b from-[#3a0d12] via-[#24080b] to-[#150406] text-white pt-12 pb-8 border-t border-deepred-900 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+                <p>© <span id="year">2026</span> <strong class="text-gold-300">Dashrathnandan Shree Ram Foundation</strong>. All rights reserved.</p>
+                <div class="flex items-center space-x-4">
+                    <a href="privacy-policy.html" class="hover:text-gold-300 transition-colors">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="terms-conditions.html" class="text-gold-300 underline font-medium">Terms & Conditions</a>
+                    <span>•</span>
+                    <a href="refund-cancellation.html" class="hover:text-gold-300 transition-colors">Refund & Cancellation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const menuOverlay = document.getElementById('menuOverlay');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function openMenu() {
+            mobileMenu.classList.add('active');
+            menuOverlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMenu() {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+        if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMenu);
+        if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMenu);
+        if (menuOverlay) menuOverlay.addEventListener('click', closeMenu);
+        mobileLinks.forEach(l => l.addEventListener('click', closeMenu));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Refund & Cancellation Policy - Dashrathnandan Shree Ram Foundation</title>
+    <link rel="icon" type="image/jpeg" href="logo.jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        saffron: {
+                            50: '#FFF8F0',
+                            100: '#FFEED6',
+                            200: '#FFD9A8',
+                            300: '#FFBF6E',
+                            400: '#FFA94D',
+                            500: '#FF9933',
+                            600: '#E67E1A',
+                            700: '#CC6600',
+                            800: '#994D00',
+                            900: '#663300'
+                        },
+                        deepred: {
+                            50: '#FFF1F1',
+                            100: '#FFE1E1',
+                            200: '#FFC7C7',
+                            300: '#FFA0A0',
+                            400: '#FF6B6B',
+                            500: '#DC2626',
+                            600: '#B91C1C',
+                            700: '#991B1B',
+                            800: '#7F1D1D',
+                            900: '#541C23'
+                        },
+                        gold: {
+                            50: '#FFFDF5',
+                            100: '#FFF9E5',
+                            200: '#FFF0BF',
+                            300: '#FFE48A',
+                            400: '#FFD700',
+                            500: '#D4A017',
+                            600: '#B8860B',
+                            700: '#8C6500'
+                        },
+                        cream: {
+                            50: '#FFFDF9',
+                            100: '#FDF8F0',
+                            200: '#F7EEDD'
+                        }
+                    },
+                    fontFamily: {
+                        playfair: ['"Playfair Display"', 'serif'],
+                        poppins: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #B91C1C 0%, #FF9933 50%, #D4A017 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #B91C1C 0%, #991B1B 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #991B1B 0%, #7F1D1D 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(185, 28, 28, 0.4);
+        }
+
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+
+<body class="bg-cream-50 text-gray-800 overflow-x-hidden flex flex-col min-h-screen">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div
+                        class="w-12 h-12 rounded-full overflow-hidden shadow-lg flex-shrink-0 border-2 border-saffron-400 bg-white">
+                        <img src="logo.jpeg" alt="Dashrathnandan Shree Ram Foundation Logo"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h1 class="font-playfair font-bold text-base sm:text-lg md:text-xl gradient-text leading-tight">
+                            Dashrathnandan Shree Ram</h1>
+                        <p class="text-xs text-gray-500 font-medium tracking-wider uppercase">Foundation</p>
+                    </div>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html#home" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Home</a>
+                    <a href="index.html#about" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">About Us</a>
+                    <a href="index.html#work" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Our Work</a>
+                    <a href="index.html#gallery" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Gallery</a>
+                    <a href="index.html#donate" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Donate</a>
+                    <a href="index.html#contact" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Contact</a>
+                    <a href="index.html#donate"
+                        class="btn-primary text-white px-6 py-2.5 rounded-full font-semibold shadow-lg flex items-center space-x-2">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Donate Now</span>
+                    </a>
+                </div>
+
+                <button id="mobileMenuBtn" class="lg:hidden p-2 text-gray-700 hover:text-deepred-600">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-72 bg-white shadow-2xl lg:hidden z-50">
+            <div class="p-6 border-b border-gray-100 flex justify-between items-center">
+                <h3 class="font-playfair font-bold text-lg gradient-text">Menu</h3>
+                <button id="closeMenuBtn" class="p-2 text-gray-500 hover:text-deepred-600">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+            <div class="p-6 flex flex-col space-y-5">
+                <a href="index.html#home"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
+                        class="fa-solid fa-house text-saffron-500"></i><span>Home</span></a>
+                <a href="index.html#about"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
+                        class="fa-solid fa-circle-info text-saffron-500"></i><span>About Us</span></a>
+                <a href="index.html#work"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
+                        class="fa-solid fa-hands-holding text-saffron-500"></i><span>Our Work</span></a>
+                <a href="index.html#gallery"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
+                        class="fa-solid fa-images text-saffron-500"></i><span>Gallery</span></a>
+                <a href="index.html#donate"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
+                        class="fa-solid fa-hand-holding-heart text-saffron-500"></i><span>Donate</span></a>
+                <a href="index.html#contact"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
+                        class="fa-solid fa-envelope text-saffron-500"></i><span>Contact</span></a>
+                <a href="index.html#donate"
+                    class="btn-primary text-white px-6 py-3 rounded-full font-semibold text-center mt-4 flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Donate Now</span>
+                </a>
+            </div>
+        </div>
+        <div id="menuOverlay" class="hidden fixed inset-0 bg-black/40 z-40 lg:hidden"></div>
+    </header>
+
+    <!-- Page Title & Breadcrumb -->
+    <div class="pt-28 pb-10 bg-gradient-to-r from-deepred-900 via-deepred-800 to-saffron-800 text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex items-center space-x-2 text-xs sm:text-sm text-gold-200 mb-3">
+                <a href="index.html" class="hover:underline">Home</a>
+                <span>/</span>
+                <span class="text-white font-medium">Refund & Cancellation</span>
+            </nav>
+            <h1 class="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold mb-2">Refund & Cancellation Policy</h1>
+            <p class="text-white/80 text-sm sm:text-base">Clear and transparent policies regarding charitable donations and technical error corrections</p>
+        </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-gray-100 space-y-8 text-gray-700 leading-relaxed text-sm sm:text-base">
+
+            <!-- Primary Policy Notice Banner -->
+            <div class="bg-gradient-to-r from-deepred-50 to-saffron-50 p-6 rounded-2xl border-2 border-deepred-200 shadow-sm flex items-start space-x-4">
+                <div class="w-12 h-12 rounded-xl bg-deepred-600 text-white flex items-center justify-center flex-shrink-0 text-xl shadow-md">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                </div>
+                <div>
+                    <h3 class="font-playfair font-bold text-gray-900 text-lg sm:text-xl mb-1">
+                        Donations Are Non-Refundable (एक बार दान होने के बाद रिफंड नहीं होगा)
+                    </h3>
+                    <p class="text-gray-700 text-sm sm:text-base">
+                        Charitable donations once made voluntarily to <strong>Dashrathnandan Shree Ram Foundation</strong> are strictly <strong>non-refundable and non-cancellable</strong> under normal circumstances, as all funds are immediately utilized for ongoing social welfare causes (daily Langar Annadaanam, Gau Seva fodder, child education supplies, and medical assistance).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 1 -->
+            <section class="space-y-3">
+                <h2 class="font-playfair text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
+                    <span class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">1</span>
+                    General Non-Refundability Policy
+                </h2>
+                <p>
+                    <strong>Dashrathnandan Shree Ram Foundation</strong> is a registered Section 8 non-profit organization under the Companies Act, 2013 (CIN: <code>U88900RJ2026NPL112929</code>).
+                </p>
+                <p>
+                    As a matter of trust policy and statutory financial compliance, <strong>all donations made voluntarily through our website, bank transfer, UPI QR code, or direct payments are final</strong>. We do not facilitate voluntary change-of-mind cancellations or requests for refunds after a donation has been processed.
+                </p>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="space-y-4">
+                <h2 class="font-playfair text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
+                    <span class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">2</span>
+                    Exception Cases: Technical Errors & Duplicate Deductions
+                </h2>
+                <p>
+                    Refunds are entertained <strong>exclusively in genuine cases of banking, payment gateway, or technical errors</strong>. A refund request will be considered only under the following specific circumstances:
+                </p>
+
+                <div class="grid sm:grid-cols-3 gap-4 pt-2">
+                    <div class="p-4 bg-gray-50 rounded-2xl border border-gray-200">
+                        <div class="w-8 h-8 rounded-lg bg-saffron-100 text-saffron-700 flex items-center justify-center mb-2 font-bold text-sm">
+                            <i class="fa-solid fa-clone"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 text-sm mb-1">Duplicate Deduction</h4>
+                        <p class="text-xs text-gray-600">Your account was debited multiple times for a single donation transaction due to server lag or network disruption.</p>
+                    </div>
+
+                    <div class="p-4 bg-gray-50 rounded-2xl border border-gray-200">
+                        <div class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-700 flex items-center justify-center mb-2 font-bold text-sm">
+                            <i class="fa-solid fa-arrow-up-right-dots"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 text-sm mb-1">Excess / Over-Deduction</h4>
+                        <p class="text-xs text-gray-600">An amount higher than your entered donation value was deducted as a result of a verified technical glitch.</p>
+                    </div>
+
+                    <div class="p-4 bg-gray-50 rounded-2xl border border-gray-200">
+                        <div class="w-8 h-8 rounded-lg bg-gold-100 text-gold-700 flex items-center justify-center mb-2 font-bold text-sm">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 text-sm mb-1">Unauthorized Misuse</h4>
+                        <p class="text-xs text-gray-600">Fraudulent payment made through compromised credentials, verified with an official police/bank dispute report.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="space-y-3">
+                <h2 class="font-playfair text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
+                    <span class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">3</span>
+                    How to Claim a Technical Error Refund
+                </h2>
+                <p>
+                    If you have experienced a technical error or duplicate deduction, you must notify our trust accounts office within <strong>7 days</strong> from the transaction date. Please follow these steps:
+                </p>
+                <ol class="list-decimal pl-6 space-y-2 text-gray-600">
+                    <li>Send an email to <strong><a href="mailto:dns.shreeramfoundation@gmail.com" class="text-deepred-600 underline">dns.shreeramfoundation@gmail.com</a></strong> or a WhatsApp message to <strong>+91 95496 23048</strong> with the subject line <em>"Refund Request - Technical Error"</em>.</li>
+                    <li>Provide the following mandatory verification documents:
+                        <ul class="list-disc pl-5 mt-1 space-y-1 text-xs sm:text-sm">
+                            <li>Donor Full Name & Mobile Number</li>
+                            <li>Transaction UTR Number / Reference ID</li>
+                            <li>Bank statement or screenshot clearly showing the duplicate/excess deduction</li>
+                            <li>Date and exact amount debited</li>
+                        </ul>
+                    </li>
+                </ol>
+            </section>
+
+            <!-- Section 4 -->
+            <section class="space-y-3">
+                <h2 class="font-playfair text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
+                    <span class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">4</span>
+                    Refund Processing & Timeline
+                </h2>
+                <ul class="list-disc pl-6 space-y-2 text-gray-600">
+                    <li><strong>Verification Period:</strong> Our finance team will review and reconcile the transaction with AU Small Finance Bank records within <strong>3 to 5 working days</strong>.</li>
+                    <li><strong>Payment Reversal:</strong> Upon successful verification of duplicate or excess credit, the refund will be initiated directly to the <strong>original source bank account / UPI ID</strong> from which the funds originated within <strong>7 to 10 working days</strong>.</li>
+                    <li>Under no circumstances will refunds be processed in cash or to an unverified third-party account.</li>
+                </ul>
+            </section>
+
+            <!-- Section 5 -->
+            <section class="space-y-3">
+                <h2 class="font-playfair text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
+                    <span class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">5</span>
+                    Impact on 80G Tax Exemption Certificates
+                </h2>
+                <p>
+                    If an 80G tax receipt has already been generated for a refunded transaction, the receipt shall stand null and void. In case the donation details have already been submitted to the Income Tax Department under Form 10BD, a corresponding revision/rectification will be filed as per CBDT guidelines.
+                </p>
+            </section>
+
+            <!-- Section 6: Official Contact Details -->
+            <section class="space-y-3">
+                <h2 class="font-playfair text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
+                    <span class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">6</span>
+                    Official Support Contact
+                </h2>
+                <div class="bg-gray-50 p-5 rounded-2xl border border-gray-200 text-sm space-y-2">
+                    <p class="font-bold text-gray-900">Dashrathnandan Shree Ram Foundation</p>
+                    <p><i class="fa-solid fa-location-dot text-deepred-600 mr-2"></i> 13A, Narvar Puri Colony, Outside Gangapole Gate, Tripolia Bazar, Jaipur, Rajasthan - 302002</p>
+                    <p><i class="fa-brands fa-whatsapp text-green-600 mr-2"></i> <strong>WhatsApp Support:</strong> +91 95496 23048</p>
+                    <p><i class="fa-solid fa-phone text-saffron-600 mr-2"></i> <strong>Call Support:</strong> +91 95496 23048 / +91 99820 32207</p>
+                    <p><i class="fa-solid fa-envelope text-gold-600 mr-2"></i> <strong>Email:</strong> dns.shreeramfoundation@gmail.com</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-b from-[#3a0d12] via-[#24080b] to-[#150406] text-white pt-12 pb-8 border-t border-deepred-900 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+                <p>© <span id="year">2026</span> <strong class="text-gold-300">Dashrathnandan Shree Ram Foundation</strong>. All rights reserved.</p>
+                <div class="flex items-center space-x-4">
+                    <a href="privacy-policy.html" class="hover:text-gold-300 transition-colors">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="terms-conditions.html" class="hover:text-gold-300 transition-colors">Terms & Conditions</a>
+                    <span>•</span>
+                    <a href="refund-cancellation.html" class="text-gold-300 underline font-medium">Refund & Cancellation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const menuOverlay = document.getElementById('menuOverlay');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function openMenu() {
+            mobileMenu.classList.add('active');
+            menuOverlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMenu() {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+        if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMenu);
+        if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMenu);
+        if (menuOverlay) menuOverlay.addEventListener('click', closeMenu);
+        mobileLinks.forEach(l => l.addEventListener('click', closeMenu));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,2003 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashrathnandan Shree Ram Foundation - Servicing Humanity with Devotion & Compassion</title>
+    <link rel="icon" type="image/jpeg" href="logo.jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        saffron: {
+                            50: '#FFF8F0',
+                            100: '#FFEED6',
+                            200: '#FFD9A8',
+                            300: '#FFBF6E',
+                            400: '#FFA94D',
+                            500: '#FF9933',
+                            600: '#E67E1A',
+                            700: '#BF5E0D',
+                            800: '#99480A',
+                            900: '#7A3A08',
+                        },
+                        deepred: {
+                            50: '#FFF5F5',
+                            100: '#FED7D7',
+                            200: '#FEB2B2',
+                            300: '#FC8181',
+                            400: '#F56565',
+                            500: '#B91C1C',
+                            600: '#991B1B',
+                            700: '#7F1D1D',
+                            800: '#6B1C1C',
+                            900: '#450A0A',
+                        },
+                        gold: {
+                            50: '#FFFBEB',
+                            100: '#FEF3C7',
+                            200: '#FDE68A',
+                            300: '#FCD34D',
+                            400: '#FBBF24',
+                            500: '#D4A017',
+                            600: '#B8860B',
+                            700: '#926911',
+                            800: '#725212',
+                            900: '#5C420E',
+                        },
+                        wine: {
+                            50: '#FDF2F4',
+                            100: '#FBE8EB',
+                            200: '#F7D1D7',
+                            300: '#EFA6B2',
+                            400: '#DF6D80',
+                            500: '#722F37',
+                            600: '#63252D',
+                            700: '#541C23',
+                            800: '#45131A',
+                            900: '#360A11',
+                        },
+                        cream: {
+                            50: '#FFFBF5',
+                            100: '#FFF8ED',
+                            200: '#FFEFC9',
+                        },
+                    },
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(185, 28, 28, 0.85) 0%, rgba(255, 153, 51, 0.75) 100%),
+                url('https://images.unsplash.com/photo-1604608672516-f1b9b1dba606?w=1920&q=80') center/cover no-repeat;
+        }
+
+        .pattern-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4A017' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .card-hover {
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(185, 28, 28, 0.25);
+        }
+
+        .gallery-item img {
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #FF9933, #B91C1C);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #B91C1C 0%, #FF9933 50%, #D4A017 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #B91C1C 0%, #991B1B 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #991B1B 0%, #7F1D1D 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(185, 28, 28, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #FF9933 0%, #E67E1A 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, #E67E1A 0%, #BF5E0D 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(255, 153, 51, 0.4);
+        }
+
+        .section-divider {
+            height: 4px;
+            width: 80px;
+            background: linear-gradient(90deg, #B91C1C, #FF9933, #D4A017);
+            border-radius: 2px;
+        }
+
+        .qr-placeholder {
+            background: repeating-linear-gradient(45deg,
+                    #FFF8ED,
+                    #FFF8ED 10px,
+                    #FFEFC9 10px,
+                    #FFEFC9 20px);
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+
+<body class="bg-cream-50 text-gray-800 overflow-x-hidden">
+
+    <!-- Header / Navigation -->
+    <header id="home" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#home" class="flex items-center space-x-3">
+                    <div
+                        class="w-12 h-12 rounded-full overflow-hidden shadow-lg flex-shrink-0 border-2 border-saffron-400 bg-white">
+                        <img src="logo.jpeg" alt="Dashrathnandan Shree Ram Foundation Logo"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h1 class="font-playfair font-bold text-base sm:text-lg md:text-xl gradient-text leading-tight">
+                            Dashrathnandan Shree Ram</h1>
+                        <p class="text-xs text-gray-500 font-medium tracking-wider uppercase">Foundation</p>
+                    </div>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">About Us</a>
+                    <a href="#work" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Our Work</a>
+                    <a href="#gallery" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Gallery</a>
+                    <a href="#donate" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Donate</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Contact</a>
+                    <a href="#donate"
+                        class="btn-primary text-white px-6 py-2.5 rounded-full font-semibold shadow-lg flex items-center space-x-2">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Donate Now</span>
+                    </a>
+                </div>
+
+                <button id="mobileMenuBtn" class="lg:hidden p-2 text-gray-700 hover:text-deepred-600">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-72 bg-white shadow-2xl lg:hidden z-50">
+            <div class="p-6 border-b border-gray-100 flex justify-between items-center">
+                <h3 class="font-playfair font-bold text-lg gradient-text">Menu</h3>
+                <button id="closeMenuBtn" class="p-2 text-gray-500 hover:text-deepred-600">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+            <div class="p-6 flex flex-col space-y-5">
+                <a href="#home"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
+                        class="fa-solid fa-house text-saffron-500"></i><span>Home</span></a>
+                <a href="#about"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
+                        class="fa-solid fa-circle-info text-saffron-500"></i><span>About Us</span></a>
+                <a href="#work"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
+                        class="fa-solid fa-hands-holding text-saffron-500"></i><span>Our Work</span></a>
+                <a href="#gallery"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
+                        class="fa-solid fa-images text-saffron-500"></i><span>Gallery</span></a>
+                <a href="#donate"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
+                        class="fa-solid fa-hand-holding-heart text-saffron-500"></i><span>Donate</span></a>
+                <a href="#contact"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
+                        class="fa-solid fa-envelope text-saffron-500"></i><span>Contact</span></a>
+                <a href="#donate"
+                    class="btn-primary text-white px-6 py-3 rounded-full font-semibold text-center mt-4 flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Donate Now</span>
+                </a>
+            </div>
+        </div>
+        <div id="menuOverlay" class="hidden fixed inset-0 bg-black/40 z-40 lg:hidden"></div>
+    </header>
+
+    <!-- Header Hero Slider Section -->
+    <section id="hero-slider" class="relative pt-20 bg-cream-100 overflow-hidden select-none">
+        <div
+            class="relative w-full overflow-hidden aspect-[16/9] sm:aspect-[21/9] md:aspect-[1584/672] max-h-[390px] shadow-lg group">
+            <!-- Horizontal Sliding Track -->
+            <div id="heroSliderTrack" class="flex w-full h-full" style="transform: translateX(0%);">
+                <!-- Slide 1 -->
+                <div class="w-full h-full flex-shrink-0 relative">
+                    <img src="slider2.png" alt="Dashrathnandan Shree Ram Foundation Banner 1"
+                        class="w-full h-full object-cover select-none pointer-events-none">
+                </div>
+                <!-- Slide 2 -->
+                <div class="w-full h-full flex-shrink-0 relative">
+                    <img src="slider3.png" alt="Dashrathnandan Shree Ram Foundation Banner 2"
+                        class="w-full h-full object-cover select-none pointer-events-none">
+                </div>
+                <!-- Slide 3 -->
+                <div class="w-full h-full flex-shrink-0 relative">
+                    <img src="slider4.png" alt="Dashrathnandan Shree Ram Foundation Banner 3"
+                        class="w-full h-full object-cover select-none pointer-events-none">
+                </div>
+                <!-- Slide 4 (Seamless Infinite Loop Clone of Slide 1) -->
+                <div class="w-full h-full flex-shrink-0 relative" aria-hidden="true">
+                    <img src="slider2.png" alt="Dashrathnandan Shree Ram Foundation Banner 1 Clone"
+                        class="w-full h-full object-cover select-none pointer-events-none">
+                </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button id="sliderPrevBtn" aria-label="Previous Slide"
+                class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-deepred-600 text-white flex items-center justify-center backdrop-blur-sm shadow-xl transition-all duration-300 opacity-80 hover:opacity-100 hover:scale-110">
+                <i class="fa-solid fa-chevron-left text-sm sm:text-base"></i>
+            </button>
+            <button id="sliderNextBtn" aria-label="Next Slide"
+                class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-deepred-600 text-white flex items-center justify-center backdrop-blur-sm shadow-xl transition-all duration-300 opacity-80 hover:opacity-100 hover:scale-110">
+                <i class="fa-solid fa-chevron-right text-sm sm:text-base"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="pt-6 sm:pt-8 pb-4 sm:pb-6 bg-cream-50/60 pattern-overlay">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 w-full">
+            <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                <!-- Left Content Column -->
+                <div class="lg:col-span-7">
+                    <div
+                        class="inline-flex items-center bg-saffron-50 border border-saffron-200 rounded-full px-5 py-2 mb-5 shadow-sm">
+                        <span class="w-2 h-2 bg-gold-500 rounded-full animate-pulse mr-2"></span>
+                        <span class="text-gray-800 text-sm font-medium">Serving Mankind Since 2023</span>
+                    </div>
+
+                    <h1
+                        class="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-gray-800 leading-tight mb-5">
+                        Servicing Humanity with
+                        <span class="block gradient-text italic mt-2">Devotion & Compassion</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-[#722F37] mb-6 leading-relaxed max-w-2xl"
+                        style="color: #722F37;">
+                        Dashrathnandan Shree Ram Foundation is dedicated to the noble cause of social welfare — from
+                        <strong class="font-bold" style="color: #541C23;">Gaushala Sewa</strong> and <strong
+                            class="font-bold" style="color: #541C23;">Annadaanam</strong> (free food distribution) to
+                        <strong class="font-bold" style="color: #541C23;">child education</strong> and <strong
+                            class="font-bold" style="color: #541C23;">medical
+                            assistance</strong> for the underprivileged. Together, let's build a world where no one
+                        sleeps
+                        hungry and every soul is cared for.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 sm:gap-5">
+                        <a href="#donate"
+                            class="btn-secondary text-white px-8 py-3.5 rounded-full font-bold text-base sm:text-lg shadow-xl flex items-center justify-center space-x-3">
+                            <i class="fa-solid fa-hand-holding-heart text-xl"></i>
+                            <span>Donate Now</span>
+                        </a>
+                        <a href="#work"
+                            class="bg-white text-deepred-600 hover:bg-cream-100 border border-deepred-100 px-8 py-3.5 rounded-full font-bold text-base sm:text-lg shadow-md transition-all flex items-center justify-center space-x-3 transform hover:-translate-y-1">
+                            <i class="fa-solid fa-eye text-xl"></i>
+                            <span>Our Work</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side Image Showcase (About Us Section Style) -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[340px]">
+                        <!-- Decorative Backdrops -->
+                        <div class="absolute -top-3 -right-3 w-20 h-20 bg-saffron-300 rounded-3xl opacity-60"></div>
+                        <div class="absolute -bottom-3 -left-3 w-24 h-24 bg-deepred-200 rounded-3xl opacity-60"></div>
+
+                        <!-- Main Image -->
+                        <img src="baba.png" alt="Servicing Humanity with Devotion & Compassion"
+                            class="relative rounded-3xl shadow-xl w-full h-[280px] sm:h-[320px] object-cover float-animation border-2 border-white">
+
+                        <!-- Floating Badge -->
+                        <div
+                            class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-md rounded-2xl px-4 py-2.5 shadow-lg flex items-center space-x-2.5 border border-gold-200">
+                            <div
+                                class="w-9 h-9 bg-gradient-to-br from-saffron-400 to-deepred-600 rounded-xl flex items-center justify-center text-white text-base shadow-sm">
+                                <i class="fa-solid fa-hands-praying"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-800 text-xs sm:text-sm">Manav Sewa</p>
+                                <p class="text-[11px] text-saffron-600 font-semibold">Madhav Sewa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="pt-6 sm:pt-10 pb-16 sm:pb-24 bg-cream-50 pattern-overlay">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 sm:mb-12">
+                <span class="inline-block text-saffron-600 font-semibold uppercase tracking-widest text-sm mb-3">Know Us
+                    Better</span>
+                <h2 class="font-playfair text-4xl sm:text-5xl font-bold text-gray-800 mb-4">About <span
+                        class="gradient-text">Dashrathnandan Shree Ram Foundation</span></h2>
+                <div class="section-divider mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">A spiritual journey of selfless service, rooted in
+                    the divine teachings of Lord Shri Ram</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-saffron-300 rounded-3xl opacity-50"></div>
+                    <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-deepred-200 rounded-3xl opacity-50"></div>
+                    <img src="1.png" alt="Dashrathnandan Shree Ram Foundation Volunteers and Children"
+                        class="relative rounded-3xl shadow-2xl w-full h-[380px] sm:h-[420px] object-cover float-animation">
+                    <div
+                        class="absolute bottom-6 left-6 bg-white rounded-2xl px-6 py-4 shadow-xl flex items-center space-x-3">
+                        <div
+                            class="w-12 h-12 bg-gradient-to-br from-saffron-400 to-gold-500 rounded-xl flex items-center justify-center">
+                            <i class="fa-solid fa-award text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-800">100%</p>
+                            <p class="text-sm text-gray-500">Transparent</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-playfair text-3xl sm:text-4xl font-bold text-gray-800 mb-6">Our <span
+                            class="gradient-text">Mission</span> & Values</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-5">
+                        Founded with the divine blessings of Lord Shri Ram, the <strong>Dashrathnandan Shree Ram
+                            Foundation</strong> is
+                        a registered charitable trust committed to <em>"Service Before Self"</em>. We believe that true
+                        devotion lies in serving the needy — feeding the hungry, sheltering the helpless, educating the
+                        underprivileged, and caring for voiceless animals.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        Every initiative of ours is guided by the timeless principles of <strong>Dharma</strong>
+                        (righteousness), <strong>Karuna</strong> (compassion), and <strong>Sewa</strong> (service). From
+                        grand Bhandaras to the quiet care of a wounded street dog, every act counts in our journey to
+                        uplift society.
+                    </p>
+
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span
+                            class="inline-flex items-center bg-deepred-50 text-deepred-700 border border-deepred-200 rounded-full px-5 py-2.5 text-sm font-semibold">
+                            <i class="fa-solid fa-file-signature mr-2 text-deepred-500"></i>
+                            Reg No: U88900RJ2026NPL112929
+                        </span>
+                        <span
+                            class="inline-flex items-center bg-saffron-50 text-saffron-700 border border-saffron-200 rounded-full px-5 py-2.5 text-sm font-semibold">
+                            <i class="fa-solid fa-certificate mr-2 text-saffron-500"></i>
+                            12A & 80G Certified
+                        </span>
+                        <span
+                            class="inline-flex items-center bg-gold-50 text-gold-700 border border-gold-200 rounded-full px-5 py-2.5 text-sm font-semibold">
+                            <i class="fa-solid fa-shield-halved mr-2 text-gold-500"></i>
+                            100% Transparent
+                        </span>
+                    </div>
+
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <span
+                                class="mt-1 w-6 h-6 rounded-full bg-deepred-100 text-deepred-600 flex items-center justify-center flex-shrink-0"><i
+                                    class="fa-solid fa-check text-xs"></i></span>
+                            <span class="text-gray-700">All donations are eligible for <strong>80G tax
+                                    exemption</strong> under Income Tax Act</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span
+                                class="mt-1 w-6 h-6 rounded-full bg-saffron-100 text-saffron-600 flex items-center justify-center flex-shrink-0"><i
+                                    class="fa-solid fa-check text-xs"></i></span>
+                            <span class="text-gray-700">Monthly published financial reports & utilization
+                                certificates</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span
+                                class="mt-1 w-6 h-6 rounded-full bg-gold-100 text-gold-600 flex items-center justify-center flex-shrink-0"><i
+                                    class="fa-solid fa-check text-xs"></i></span>
+                            <span class="text-gray-700">Zero overhead on administration — every rupee goes directly to
+                                the cause</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Message from Managing Trustees Carousel (Right-to-Left Flow) -->
+            <div id="trusteeSliderContainer"
+                class="relative bg-gradient-to-br from-deepred-50 via-white to-saffron-50 rounded-3xl p-6 sm:p-12 border border-deepred-100 shadow-xl overflow-hidden">
+
+                <!-- Slides Grid Wrapper -->
+                <div class="grid grid-cols-1 grid-rows-1 overflow-hidden w-full relative">
+                    <!-- Slide 1: Dhruva Sharma -->
+                    <div id="trusteeSlide0" class="col-start-1 row-start-1 w-full will-change-transform"
+                        style="transform: translateX(0%); opacity: 1; z-index: 10;">
+                        <div class="grid lg:grid-cols-5 gap-8 items-center">
+                            <div class="lg:col-span-1 flex justify-center">
+                                <div class="relative">
+                                    <div
+                                        class="w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-gradient-to-br from-saffron-400 via-gold-400 to-deepred-500 p-1 shadow-xl">
+                                        <img src="trsty1.png" alt="Dhruva Sharma - Founder & Chairman"
+                                            class="w-full h-full rounded-full object-cover">
+                                    </div>
+                                    <div
+                                        class="absolute -bottom-2 -right-2 w-12 h-12 bg-gold-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                                        <i class="fa-solid fa-quote-left text-white"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lg:col-span-4">
+                                <div class="flex flex-wrap items-center justify-between gap-3 mb-2">
+                                    <h4 class="font-playfair text-2xl sm:text-3xl font-bold text-gray-800">Message from
+                                        the Managing Trustee</h4>
+                                    <span
+                                        class="inline-flex items-center space-x-1.5 px-3 py-1 bg-deepred-100 text-deepred-700 rounded-full text-xs font-semibold tracking-wide uppercase">
+                                        <i class="fa-solid fa-star text-gold-500 text-[10px]"></i>
+                                        <span>Trustee 1 of 2</span>
+                                    </span>
+                                </div>
+                                <p class="text-saffron-600 font-semibold text-base mb-5">— Dhruva Sharma, Founder &
+                                    Chairman</p>
+                                <blockquote
+                                    class="text-gray-700 text-base sm:text-lg leading-relaxed italic border-l-4 border-saffron-400 pl-5 space-y-3">
+                                    <p>"Service to humanity is service to God.</p>
+                                    <p>Just stop and think for a moment... How many innocent children are there in this
+                                        world, whom their own parents have left behind in this cruel world solely to beg
+                                        or pick rags? They should have books in their tiny hands, but instead, they are
+                                        forced to wander the streets just to feed their hunger.</p>
+                                    <p>And on the other side, there are those elderly parents who spent their entire
+                                        youth raising and nurturing their children, and when the time came for those
+                                        children to be the staff of their old age, the very same children showed them
+                                        the door. Sobbing on street corners or in old-age homes, those parents live a
+                                        life of everyday suffocation.</p>
+                                    <p>Witnessing these two tales of pain, Dashrathnandan Shree Ram Foundation has come
+                                        into being. Our resolve is not merely to perform service on paper, but to place
+                                        a pen in the hands of those helpless children and to provide a respectful lap
+                                        and a family to those discarded parents.</p>
+                                    <p>This path is difficult, and we are just beginning this journey. But with your
+                                        support, no child will be forced to beg, and no parent will be left homeless.
+                                        Come, be our companions in this sacred and compassionate journey. May Lord Shri
+                                        Ram give us all the strength to fulfill this noble mission."</p>
+                                </blockquote>
+                                <div class="mt-6 flex items-center space-x-4">
+                                    <div class="flex -space-x-2">
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-saffron-200 border-2 border-white flex items-center justify-center">
+                                            <i class="fa-solid fa-om text-saffron-700 text-sm"></i>
+                                        </div>
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-deepred-200 border-2 border-white flex items-center justify-center">
+                                            <i class="fa-solid fa-om text-deepred-700 text-sm"></i>
+                                        </div>
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-gold-200 border-2 border-white flex items-center justify-center">
+                                            <i class="fa-solid fa-om text-gold-700 text-sm"></i>
+                                        </div>
+                                    </div>
+                                    <span class="text-gray-500 text-sm font-medium">Joined by 10,000+
+                                        well-wishers</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Vaibhav Sharma -->
+                    <div id="trusteeSlide1" class="col-start-1 row-start-1 w-full will-change-transform"
+                        style="transform: translateX(100%); opacity: 0; z-index: 5; pointer-events: none;">
+                        <div class="grid lg:grid-cols-5 gap-8 items-center">
+                            <div class="lg:col-span-1 flex justify-center">
+                                <div class="relative">
+                                    <div
+                                        class="w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-gradient-to-br from-deepred-500 via-gold-400 to-saffron-400 p-1 shadow-xl">
+                                        <img src="trsty2.png" alt="Vaibhav Sharma - Co-Founder & Managing Trustee"
+                                            class="w-full h-full rounded-full object-cover">
+                                    </div>
+                                    <div
+                                        class="absolute -bottom-2 -right-2 w-12 h-12 bg-deepred-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                                        <i class="fa-solid fa-quote-left text-white"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lg:col-span-4">
+                                <div class="flex flex-wrap items-center justify-between gap-3 mb-2">
+                                    <h4 class="font-playfair text-2xl sm:text-3xl font-bold text-gray-800">Message from
+                                        the Managing Trustee</h4>
+                                    <span
+                                        class="inline-flex items-center space-x-1.5 px-3 py-1 bg-saffron-100 text-saffron-800 rounded-full text-xs font-semibold tracking-wide uppercase">
+                                        <i class="fa-solid fa-star text-gold-500 text-[10px]"></i>
+                                        <span>Trustee 2 of 2</span>
+                                    </span>
+                                </div>
+                                <p class="text-saffron-600 font-semibold text-base mb-5">— Vaibhav Sharma, Co-Founder &
+                                    Managing Trustee</p>
+                                <blockquote
+                                    class="text-gray-700 text-base sm:text-lg leading-relaxed italic border-l-4 border-deepred-400 pl-5 space-y-3">
+                                    <p>"True dharma is illuminated when we dedicate our lives to the selfless service of
+                                        living beings. As taught in our sacred scriptures, <em>'Parhit Saris Dharam Nahi
+                                            Bhai'</em> — there is no greater spiritual devotion than wiping away
+                                        someone's tears.</p>
+                                    <p>At Dashrathnandan Shree Ram Foundation, our mission is driven by a deep sense of
+                                        responsibility towards humanity and nature. Through continuous
+                                        <strong>Annadaanam</strong>, we strive to ensure that no hungry soul is turned
+                                        away. In our <strong>Gaushala Sewa</strong>, we revere and shelter Gau Mata with
+                                        devotion, and through educational & medical assistance, we strive to build an
+                                        equitable, self-reliant future for underprivileged families.
+                                    </p>
+                                    <p>No noble revolution is created by an individual alone; it is born from the
+                                        collective compassion of society. Every contribution, whether of time, prayer,
+                                        or resources, becomes an integral part of this ongoing Mahayajna. Let us join
+                                        hands together to serve society with pure devotion and unwavering commitment."
+                                    </p>
+                                </blockquote>
+                                <div class="mt-6 flex items-center space-x-4">
+                                    <div class="flex -space-x-2">
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-saffron-200 border-2 border-white flex items-center justify-center">
+                                            <i class="fa-solid fa-om text-saffron-700 text-sm"></i>
+                                        </div>
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-deepred-200 border-2 border-white flex items-center justify-center">
+                                            <i class="fa-solid fa-om text-deepred-700 text-sm"></i>
+                                        </div>
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-gold-200 border-2 border-white flex items-center justify-center">
+                                            <i class="fa-solid fa-om text-gold-700 text-sm"></i>
+                                        </div>
+                                    </div>
+                                    <span class="text-gray-500 text-sm font-medium">Joined by 10,000+
+                                        well-wishers</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Controls: Dots & Navigation Buttons -->
+                <div class="flex items-center justify-between mt-8 pt-6 border-t border-deepred-100/70">
+                    <!-- Dots Indicator -->
+                    <div class="flex items-center space-x-2.5">
+                        <button type="button"
+                            class="trustee-dot h-2.5 w-8 rounded-full bg-deepred-600 transition-all duration-300"
+                            onclick="goToTrusteeSlide(0)" aria-label="Go to Trustee 1"></button>
+                        <button type="button"
+                            class="trustee-dot h-2.5 w-2.5 rounded-full bg-gray-300 hover:bg-deepred-400 transition-all duration-300"
+                            onclick="goToTrusteeSlide(1)" aria-label="Go to Trustee 2"></button>
+                    </div>
+
+                    <!-- Next & Previous Arrow Controls -->
+                    <div class="flex items-center space-x-3">
+                        <button type="button" onclick="prevTrusteeSlide()"
+                            class="w-10 h-10 rounded-full bg-white hover:bg-deepred-600 text-gray-700 hover:text-white border border-gray-200 shadow-md flex items-center justify-center transition-all duration-300 transform hover:scale-105"
+                            aria-label="Previous Trustee">
+                            <i class="fa-solid fa-chevron-left text-sm"></i>
+                        </button>
+                        <button type="button" onclick="nextTrusteeSlide()"
+                            class="w-10 h-10 rounded-full bg-white hover:bg-deepred-600 text-gray-700 hover:text-white border border-gray-200 shadow-md flex items-center justify-center transition-all duration-300 transform hover:scale-105"
+                            aria-label="Next Trustee">
+                            <i class="fa-solid fa-chevron-right text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Initiatives / Key Work Cards -->
+    <section id="work" class="">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block text-deepred-600 font-semibold uppercase tracking-widest text-sm mb-3">What We
+                    Do</span>
+                <h2 class="font-playfair text-4xl sm:text-5xl font-bold text-gray-800 mb-4">Our <span
+                        class="gradient-text">Key Initiatives</span></h2>
+                <div class="section-divider mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">Four pillars of our social welfare work — each driven
+                    by devotion and executed with sincerity</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="1.png" alt="Annadaanam - Free Food Distribution"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-deepred-800/80 via-transparent to-transparent">
+                        </div>
+                        <div
+                            class="absolute top-4 left-4 w-14 h-14 bg-white/95 backdrop-blur rounded-2xl flex items-center justify-center shadow-lg">
+                            <i class="fa-solid fa-bowl-food text-deepred-600 text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-7">
+                        <h3 class="font-playfair text-2xl font-bold text-gray-800 mb-3">Annadaanam</h3>
+                        <p class="text-sm text-saffron-600 font-semibold uppercase tracking-wider mb-4">Free Food
+                            Distribution</p>
+                        <p class="text-gray-600 leading-relaxed mb-5">
+                            "No one should go to bed hungry" — with this strong resolve, we have embarked on our
+                            Annadaanam journey. Although we are in our initial phase right now, our vision and
+                            commitment are vast.
+
+                            We are steadily building our capacity to ensure that in the near future, nutritious satvik
+                            meals reach thousands of underprivileged individuals, slum children, and needy souls on a
+                            regular basis.
+
+                            Initiating Regular Food Distribution (Initial Phase)
+
+                            Upcoming Seasonal & Special Bhandara Events
+
+                            Future Mobile Vans for Slum Areas
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-sm text-gray-600"><i
+                                    class="fa-solid fa-circle-check text-saffron-500 mr-2 text-xs"></i>Daily Langar for
+                                500+ people</li>
+                            <li class="flex items-center text-sm text-gray-600"><i
+                                    class="fa-solid fa-circle-check text-saffron-500 mr-2 text-xs"></i>Seasonal Bhandara
+                                Events</li>
+                            <li class="flex items-center text-sm text-gray-600"><i
+                                    class="fa-solid fa-circle-check text-saffron-500 mr-2 text-xs"></i>Mobile Vans for
+                                Slums</li>
+                        </ul>
+                        <a href="#donate"
+                            class="inline-flex items-center text-deepred-600 font-semibold hover:text-deepred-700">
+                            Support Annadaanam <i
+                                class="fa-solid fa-arrow-right ml-2 text-sm transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="gau.png" alt="Gaushala & Animal Welfare - Dashrathnandan Shree Ram Foundation"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-saffron-800/80 via-transparent to-transparent">
+                        </div>
+                        <div
+                            class="absolute top-4 left-4 w-14 h-14 bg-white/95 backdrop-blur rounded-2xl flex items-center justify-center shadow-lg">
+                            <i class="fa-solid fa-cow text-saffron-600 text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-7">
+                        <h3 class="font-playfair text-2xl font-bold text-gray-800 mb-3">Gaushala & Animal Welfare</h3>
+                        <p class="text-sm text-deepred-600 font-semibold uppercase tracking-wider mb-4">Care for Cows &
+                            Strays</p>
+                        <p class="text-gray-600 leading-relaxed mb-5">
+                            "Service to voiceless beings is true service to the Divine."
+
+                            Although we are just beginning this journey, our resolve is to provide safety and love to
+                            every abandoned cow and stray animal on the streets. With our limited resources, we are
+                            taking small yet strong steps toward tending to injured animals and providing them with
+                            shelter.
+
+                            Initial care and fodder service for abandoned voiceless animals
+
+                            Rescue efforts for injured and sick animals
+
+                            Future expansion of Gaushala and veterinary camps
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-sm text-gray-600"><i
+                                    class="fa-solid fa-circle-check text-saffron-500 mr-2 text-xs"></i>200+ Cows in
+                                Gaushala</li>
+                            <li class="flex items-center text-sm text-gray-600"><i
+                                    class="fa-solid fa-circle-check text-saffron-500 mr-2 text-xs"></i>Rescue &
+                                Ambulance Service</li>
+                            <li class="flex items-center text-sm text-gray-600"><i
+                                    class="fa-solid fa-circle-check text-saffron-500 mr-2 text-xs"></i>Free Veterinary
+                                Camps</li>
+                        </ul>
+                        <a href="#donate"
+                            class="inline-flex items-center text-deepred-600 font-semibold hover:text-deepred-700">
+                            Donate for Gau Seva <i
+                                class="fa-solid fa-arrow-right ml-2 text-sm transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="muskan.png" alt="Child Education & Empowerment - Dashrathnandan Shree Ram Foundation"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gold-800/80 via-transparent to-transparent">
+                        </div>
+                        <div
+                            class="absolute top-4 left-4 w-14 h-14 bg-white/95 backdrop-blur rounded-2xl flex items-center justify-center shadow-lg">
+                            <i class="fa-solid fa-book-open-reader text-gold-600 text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-7">
+                        <h3 class="font-playfair text-2xl font-bold text-gray-800 mb-3">Child Education & Empowerment
+                        </h3>
+                        <p class="text-sm text-gold-700 font-semibold uppercase tracking-wider mb-4">For Underprivileged
+                            Kids</p>
+                        <p class="text-gray-600 leading-relaxed mb-5">
+                            Stepping Toward a Brighter Future for Underprivileged Children
+
+                            Education is every child's right. No child should be deprived of learning due to a lack of
+                            resources—that is our core dream. Right now, we are taking small, dedicated steps to bring
+                            the light of education to slum areas and needy children.
+
+                            Free initial teaching and educational support for underprivileged children
+
+                            Distribution of books, notebooks, and learning materials
+
+                            Continuous community outreach to encourage education
+
+                            Educational Trips & Learning Tours (Organizing excursions to broaden their horizons and
+                            spark curiosity)
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-sm text-gray-600"><i
+                                    class="fa-solid fa-circle-check text-saffron-500 mr-2 text-xs"></i>Free Coaching &
+                                Tuitions</li>
+                            <li class="flex items-center text-sm text-gray-600"><i
+                                    class="fa-solid fa-circle-check text-saffron-500 mr-2 text-xs"></i>Books & Uniform
+                                Distribution</li>
+                            <li class="flex items-center text-sm text-gray-600"><i
+                                    class="fa-solid fa-circle-check text-saffron-500 mr-2 text-xs"></i>Scholarship
+                                Programs</li>
+                        </ul>
+                        <a href="#donate"
+                            class="inline-flex items-center text-deepred-600 font-semibold hover:text-deepred-700">
+                            Sponsor a Child <i
+                                class="fa-solid fa-arrow-right ml-2 text-sm transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80"
+                            alt="Medical Assistance"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-deepred-900/80 via-transparent to-transparent">
+                        </div>
+                        <div
+                            class="absolute top-4 left-4 w-14 h-14 bg-white/95 backdrop-blur rounded-2xl flex items-center justify-center shadow-lg">
+                            <i class="fa-solid fa-kit-medical text-deepred-600 text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-7">
+                        <h3 class="font-playfair text-2xl font-bold text-gray-800 mb-3">Medical Assistance</h3>
+                        <p class="text-sm text-saffron-700 font-semibold uppercase tracking-wider mb-4">Health Camps &
+                            Medicines</p>
+                        <p class="text-gray-600 leading-relaxed mb-5">
+                            Moving forward with the thought that no poor person should feel helpless due to a lack of
+                            healthcare facilities. Right now, in the initial phase, we are striving to deliver medicines
+                            and health-related support to people on a small scale.
+
+                            Small-scale health and awareness initiatives
+
+                            Free medicine and consultation support for the needy
+
+                            Efforts to assist in critical cases with limited resources
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-sm text-gray-600"><i
+                                    class="fa-solid fa-circle-check text-saffron-500 mr-2 text-xs"></i>Monthly Health
+                                Camps</li>
+                            <li class="flex items-center text-sm text-gray-600"><i
+                                    class="fa-solid fa-circle-check text-saffron-500 mr-2 text-xs"></i>Free Generic
+                                Medicines</li>
+                            <li class="flex items-center text-sm text-gray-600"><i
+                                    class="fa-solid fa-circle-check text-saffron-500 mr-2 text-xs"></i>Treatment
+                                Financial Aid</li>
+                        </ul>
+                        <a href="#donate"
+                            class="inline-flex items-center text-deepred-600 font-semibold hover:text-deepred-700">
+                            Donate for Health <i
+                                class="fa-solid fa-arrow-right ml-2 text-sm transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="gallery" class="py-20 sm:py-28 bg-cream-50 pattern-overlay">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block text-gold-700 font-semibold uppercase tracking-widest text-sm mb-3">Moments of
+                    Sewa</span>
+                <h2 class="font-playfair text-4xl sm:text-5xl font-bold text-gray-800 mb-4">Our <span
+                        class="gradient-text">Photo Gallery</span></h2>
+                <div class="section-divider mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">A glimpse into our journey of compassion — every
+                    picture tells a story of hope</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+                <div
+                    class="gallery-item relative col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+                    <img src="jay.png" alt="Grand Bhandara - Dashrathnandan Shree Ram Foundation"
+                        class="w-full h-full object-cover min-h-[320px] sm:min-h-[400px]">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-5 left-5 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="font-playfair font-bold text-xl mb-1">Grand Bhandara</h4>
+                        <p class="text-white/80 text-sm">Feeding 3000+ devotees on Ram Navami</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+                    <img src="gau.png" alt="Gau Seva - Dashrathnandan Shree Ram Foundation"
+                        class="w-full h-48 sm:h-52 object-cover">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="font-bold text-sm">Gau Seva</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+                    <img src="muskan.png" alt="Education Drive - Dashrathnandan Shree Ram Foundation"
+                        class="w-full h-48 sm:h-52 object-cover">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="font-bold text-sm">Education Drive</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+                    <img src="dhruv.png" alt="Health Camp - Dashrathnandan Shree Ram Foundation"
+                        class="w-full h-48 sm:h-52 object-cover">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="font-bold text-sm">Health Camp</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+                    <img src="team.png" alt="Our Volunteers - Dashrathnandan Shree Ram Foundation"
+                        class="w-full h-48 sm:h-52 object-cover">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="font-bold text-sm">Our Volunteers</h4>
+                    </div>
+                </div>
+
+                <div
+                    class="gallery-item relative col-span-2 rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+                    <img src="slider3.png" alt="Daily Langar Seva - Dashrathnandan Shree Ram Foundation"
+                        class="w-full h-48 sm:h-52 object-cover object-center">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="font-bold">Birthday Celebration</h4>
+                        <p class="text-white/80 text-sm">Served with love, faith & humility</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+                    <img src="childs.png" alt="Donation Drive - Dashrathnandan Shree Ram Foundation"
+                        class="w-full h-48 sm:h-52 object-cover">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="font-bold text-sm">Donation Drive</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+                    <img src="ujjwal.png" alt="Festival Celebration - Dashrathnandan Shree Ram Foundation"
+                        class="w-full h-48 sm:h-52 object-cover">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="font-bold text-sm">Festival Celebration</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation & Bank Details Section -->
+    <section id="donate" class="">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block text-deepred-600 font-semibold uppercase tracking-widest text-sm mb-3">Make a
+                    Difference</span>
+                <h2 class="font-playfair text-4xl sm:text-5xl font-bold text-gray-800 mb-4">Support Our Cause — <span
+                        class="gradient-text">Every Rupee Counts</span></h2>
+                <div class="section-divider mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">Your generous donation is a step towards a kinder
+                    world. All contributions are eligible for <strong class="text-deepred-600">80G Tax
+                        Exemption</strong>. Choose your preferred method below.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 mb-8">
+                <div class="bg-white rounded-3xl shadow-xl border border-saffron-100 overflow-hidden">
+                    <div class="bg-gradient-to-r from-deepred-600 to-deepred-700 p-6 sm:p-7 text-white">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <div class="w-11 h-11 bg-white/15 rounded-xl flex items-center justify-center">
+                                <i class="fa-solid fa-building-columns text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-playfair text-2xl font-bold">Bank Transfer Details</h3>
+                                <p class="text-white/80 text-sm">Direct NEFT / RTGS / IMPS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 sm:p-8 space-y-5">
+                        <div class="flex items-start space-x-4 p-4 bg-cream-50 rounded-2xl border border-cream-200">
+                            <div
+                                class="w-10 h-10 bg-saffron-100 text-saffron-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-xs font-semibold uppercase tracking-wider text-gray-400">Account Name</p>
+                                <p class="text-gray-800 font-bold text-lg break-words">Dashrathnandan Shree Ram
+                                    Foundation</p>
+                            </div>
+                            <button onclick="copyText('Dashrathnandan Shree Ram Foundation')"
+                                class="p-2 text-gray-400 hover:text-deepred-600 hover:bg-deepred-50 rounded-lg transition-colors"
+                                title="Copy">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-4 bg-cream-50 rounded-2xl border border-cream-200">
+                            <div
+                                class="w-10 h-10 bg-deepred-100 text-deepred-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-hashtag"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-xs font-semibold uppercase tracking-wider text-gray-400">Account Number
+                                </p>
+                                <p class="text-gray-800 font-bold text-lg break-all tracking-wider">2601240421717033</p>
+                            </div>
+                            <button onclick="copyText('2601240421717033')"
+                                class="p-2 text-gray-400 hover:text-deepred-600 hover:bg-deepred-50 rounded-lg transition-colors"
+                                title="Copy">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div class="p-4 bg-cream-50 rounded-2xl border border-cream-200">
+                                <div class="flex items-center space-x-3 mb-2">
+                                    <i class="fa-solid fa-code text-saffron-500"></i>
+                                    <p class="text-xs font-semibold uppercase tracking-wider text-gray-400">IFSC Code
+                                    </p>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <p class="text-gray-800 font-bold break-all tracking-wider">AUBL0002404</p>
+                                    <button onclick="copyText('AUBL0002404')"
+                                        class="p-2 text-gray-400 hover:text-deepred-600 hover:bg-deepred-50 rounded-lg transition-colors"
+                                        title="Copy">
+                                        <i class="fa-regular fa-copy text-sm"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-cream-50 rounded-2xl border border-cream-200">
+                                <div class="flex items-center space-x-3 mb-2">
+                                    <i class="fa-solid fa-building-columns text-deepred-500"></i>
+                                    <p class="text-xs font-semibold uppercase tracking-wider text-gray-400">Bank Name
+                                    </p>
+                                </div>
+                                <p class="text-gray-800 font-bold">AU SMALL FINANCE BANK</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="p-4 bg-gradient-to-r from-saffron-50 to-gold-50 rounded-2xl border border-saffron-200">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <i class="fa-solid fa-location-dot text-deepred-500"></i>
+                                <p class="text-xs font-semibold uppercase tracking-wider text-gray-400">Branch</p>
+                            </div>
+                            <p class="text-gray-800 font-semibold">Hathroi , Jaipur</p>
+                        </div>
+
+                        <div class="bg-deepred-50 border border-deepred-100 rounded-2xl p-5 flex items-start space-x-4">
+                            <div
+                                class="w-10 h-10 bg-deepred-100 text-deepred-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-shield-heart text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-deepred-800 mb-1">100% Secure & Tax Exempt</p>
+                                <p class="text-sm text-deepred-700">Donations to Dashrathnandan Shree Ram Foundation are
+                                    eligible for
+                                    <strong>50% tax exemption</strong> under Section <strong>80G</strong> of the Income
+                                    Tax Act, 1961.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-xl border border-saffron-100 overflow-hidden">
+                    <div class="bg-gradient-to-r from-saffron-500 to-gold-500 p-6 sm:p-7 text-white">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <div class="w-11 h-11 bg-white/15 rounded-xl flex items-center justify-center">
+                                <i class="fa-solid fa-qrcode text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-playfair text-2xl font-bold">Scan & Pay via UPI</h3>
+                                <p class="text-white/90 text-sm">GPay • PhonePe • Paytm • Any UPI App</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 sm:p-8 flex flex-col items-center">
+                        <div class="relative mb-5 w-full max-w-xs mx-auto">
+                            <div
+                                class="bg-white p-3 sm:p-4 rounded-3xl shadow-2xl border-4 border-cream-100 transition-all duration-300 hover:shadow-saffron-200 hover:border-saffron-200">
+                                <img src="DashrathnandanQR.png"
+                                    alt="Dashrathnandan Shree Ram Foundation Official UPI QR Code"
+                                    class="w-full h-auto rounded-2xl object-contain mx-auto block shadow-sm">
+                            </div>
+                            <div
+                                class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-deepred-600 to-saffron-600 text-white text-xs font-bold px-4 py-1 rounded-full shadow-md flex items-center space-x-1.5 whitespace-nowrap">
+                                <i class="fa-solid fa-qrcode text-xs"></i>
+                                <span>OFFICIAL UPI QR</span>
+                            </div>
+                        </div>
+
+                        <!-- Download / Save QR Button -->
+                        <div class="mb-5 text-center">
+                            <a href="DashrathnandanQR.png" download="Dashrathnandan_Shree_Ram_Foundation_QR.png"
+                                class="inline-flex items-center space-x-2 text-xs font-semibold text-deepred-600 hover:text-white hover:bg-deepred-600 bg-deepred-50 px-4 py-2 rounded-full transition-all duration-200 border border-deepred-200 shadow-sm">
+                                <i class="fa-solid fa-download"></i>
+                                <span>Save / Download QR</span>
+                            </a>
+                        </div>
+
+                        <div class="bg-cream-50 w-full rounded-2xl border border-cream-200 p-4 sm:p-5 mb-5">
+                            <p class="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-2 text-center">
+                                Or Pay to UPI ID
+                            </p>
+                            <div
+                                class="flex items-center justify-between bg-white rounded-xl p-3 border border-gray-100 shadow-sm gap-2">
+                                <div class="flex items-center space-x-3 min-w-0">
+                                    <div
+                                        class="w-10 h-10 bg-gradient-to-br from-saffron-500 to-deepred-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i class="fa-solid fa-mobile-screen-button text-white"></i>
+                                    </div>
+                                    <div class="min-w-0">
+                                        <p class="text-xs text-gray-400">UPI ID</p>
+                                        <p class="font-bold text-gray-800 text-xs sm:text-sm break-all">
+                                            dasrathnandanshreeramfoundation1516@aubank</p>
+                                    </div>
+                                </div>
+                                <button onclick="copyText('dasrathnandanshreeramfoundation1516@aubank')"
+                                    class="p-2.5 text-gray-400 hover:text-deepred-600 hover:bg-deepred-50 rounded-lg transition-colors flex-shrink-0"
+                                    title="Copy UPI ID">
+                                    <i class="fa-regular fa-copy text-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="w-full grid grid-cols-3 gap-3">
+                            <div
+                                class="flex flex-col items-center p-3 bg-cream-50 rounded-xl border border-cream-200 hover:bg-cream-100 transition-colors">
+                                <div
+                                    class="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center mb-1">
+                                    <i class="fa-brands fa-google-pay text-2xl text-saffron-600"></i>
+                                </div>
+                                <span class="text-xs font-medium text-gray-600">GPay</span>
+                            </div>
+                            <div
+                                class="flex flex-col items-center p-3 bg-cream-50 rounded-xl border border-cream-200 hover:bg-cream-100 transition-colors">
+                                <div
+                                    class="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center mb-1">
+                                    <i class="fa-solid fa-mobile-screen text-2xl text-green-600"></i>
+                                </div>
+                                <span class="text-xs font-medium text-gray-600">PhonePe</span>
+                            </div>
+                            <div
+                                class="flex flex-col items-center p-3 bg-cream-50 rounded-xl border border-cream-200 hover:bg-cream-100 transition-colors">
+                                <div
+                                    class="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center mb-1">
+                                    <i class="fa-solid fa-wallet text-2xl text-sky-600"></i>
+                                </div>
+                                <span class="text-xs font-medium text-gray-600">Paytm</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="bg-gradient-to-r from-deepred-600 via-deepred-700 to-deepred-600 rounded-3xl p-6 sm:p-8 mb-10 shadow-2xl">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-6">
+                    <div
+                        class="w-16 h-16 bg-white/15 backdrop-blur rounded-2xl flex items-center justify-center flex-shrink-0 border border-white/20">
+                        <i class="fa-solid fa-file-invoice text-3xl text-gold-300"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-playfair text-xl sm:text-2xl font-bold text-white mb-1 flex items-center">
+                            <i class="fa-solid fa-triangle-exclamation text-gold-300 mr-3"></i>
+                            Important Notice for All Donors
+                        </h4>
+                        <p class="text-white/90 text-base sm:text-lg">
+                            Please fill out the <strong>Receipt Form below</strong> immediately after making any
+                            transfer (Bank / UPI). This helps us verify your donation and issue your <strong
+                                class="text-gold-300">80G Tax Receipt</strong> within 48 hours to your registered email.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl border border-saffron-100 overflow-hidden">
+                <div class="bg-gradient-to-r from-saffron-600 via-saffron-500 to-gold-500 p-6 sm:p-7 text-white">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-11 h-11 bg-white/15 rounded-xl flex items-center justify-center">
+                            <i class="fa-solid fa-pen-to-square text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-playfair text-2xl font-bold">Donation Receipt & 80G Form</h3>
+                            <p class="text-white/90 text-sm">Fill this form after making the payment to receive your tax
+                                certificate</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="donationForm" class="p-6 sm:p-10">
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                Full Name <span class="text-deepred-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"><i
+                                        class="fa-solid fa-user"></i></span>
+                                <input type="text" required
+                                    class="w-full pl-11 pr-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-saffron-500 focus:ring-4 focus:ring-saffron-100 outline-none transition-all bg-cream-50/50"
+                                    placeholder="Enter your full name">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                Phone Number <span class="text-deepred-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"><i
+                                        class="fa-solid fa-phone"></i></span>
+                                <span
+                                    class="absolute left-12 top-1/2 -translate-y-1/2 text-gray-500 font-semibold border-r border-gray-200 pr-3">+91</span>
+                                <input type="tel" required pattern="[0-9]{10}"
+                                    class="w-full pl-28 pr-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-saffron-500 focus:ring-4 focus:ring-saffron-100 outline-none transition-all bg-cream-50/50"
+                                    placeholder="10-digit mobile number">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                Email Address <span class="text-gray-400 font-normal">(for 80G receipt)</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"><i
+                                        class="fa-solid fa-envelope"></i></span>
+                                <input type="email"
+                                    class="w-full pl-11 pr-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-saffron-500 focus:ring-4 focus:ring-saffron-100 outline-none transition-all bg-cream-50/50"
+                                    placeholder="you@example.com">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                Donation Date <span class="text-deepred-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"><i
+                                        class="fa-solid fa-calendar"></i></span>
+                                <input type="date" required
+                                    class="w-full pl-11 pr-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-saffron-500 focus:ring-4 focus:ring-saffron-100 outline-none transition-all bg-cream-50/50">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                Transaction ID / UTR No. <span class="text-deepred-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"><i
+                                        class="fa-solid fa-hashtag"></i></span>
+                                <input type="text" required
+                                    class="w-full pl-11 pr-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-saffron-500 focus:ring-4 focus:ring-saffron-100 outline-none transition-all bg-cream-50/50 uppercase"
+                                    placeholder="e.g. 456789012345 (12-digit UTR / UPI Ref ID)">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                Amount Paid (₹) <span class="text-deepred-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"><i
+                                        class="fa-solid fa-indian-rupee-sign"></i></span>
+                                <input type="number" required min="1"
+                                    class="w-full pl-11 pr-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-saffron-500 focus:ring-4 focus:ring-saffron-100 outline-none transition-all bg-cream-50/50"
+                                    placeholder="Enter donation amount">
+                            </div>
+                            <div class="flex flex-wrap gap-2 mt-3">
+                                <button type="button" onclick="setAmount(101)"
+                                    class="px-3 py-1.5 text-xs font-semibold bg-saffron-50 text-saffron-700 border border-saffron-200 rounded-lg hover:bg-saffron-100 transition-colors">₹101</button>
+                                <button type="button" onclick="setAmount(501)"
+                                    class="px-3 py-1.5 text-xs font-semibold bg-saffron-50 text-saffron-700 border border-saffron-200 rounded-lg hover:bg-saffron-100 transition-colors">₹501</button>
+                                <button type="button" onclick="setAmount(1001)"
+                                    class="px-3 py-1.5 text-xs font-semibold bg-saffron-50 text-saffron-700 border border-saffron-200 rounded-lg hover:bg-saffron-100 transition-colors">₹1,001</button>
+                                <button type="button" onclick="setAmount(5100)"
+                                    class="px-3 py-1.5 text-xs font-semibold bg-saffron-50 text-saffron-700 border border-saffron-200 rounded-lg hover:bg-saffron-100 transition-colors">₹5,100</button>
+                                <button type="button" onclick="setAmount(11000)"
+                                    class="px-3 py-1.5 text-xs font-semibold bg-saffron-50 text-saffron-700 border border-saffron-200 rounded-lg hover:bg-saffron-100 transition-colors">₹11,000</button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                Payment Mode
+                            </label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"><i
+                                        class="fa-solid fa-credit-card"></i></span>
+                                <select
+                                    class="w-full pl-11 pr-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-saffron-500 focus:ring-4 focus:ring-saffron-100 outline-none transition-all bg-cream-50/50 appearance-none">
+                                    <option>Bank Transfer (NEFT/RTGS/IMPS)</option>
+                                    <option>UPI — Google Pay / PhonePe / Paytm</option>
+                                    <option>Cheque / DD</option>
+                                    <option>Cash Deposit</option>
+                                    <option>Other</option>
+                                </select>
+                                <span
+                                    class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"><i
+                                        class="fa-solid fa-chevron-down text-xs"></i></span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                PAN Number <span class="text-gray-400 font-normal">(Required for 80G receipt above
+                                    ₹50K)</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"><i
+                                        class="fa-solid fa-id-card"></i></span>
+                                <input type="text" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}"
+                                    class="w-full pl-11 pr-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-saffron-500 focus:ring-4 focus:ring-saffron-100 outline-none transition-all bg-cream-50/50 uppercase"
+                                    placeholder="e.g. ABCDE1234F">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">
+                            Which cause would you like to support? (Optional)
+                        </label>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="cause" class="peer sr-only" checked>
+                                <div
+                                    class="p-4 rounded-xl border-2 border-gray-200 peer-checked:border-deepred-500 peer-checked:bg-deepred-50 hover:border-saffron-300 transition-all text-center">
+                                    <i class="fa-solid fa-bowl-food text-xl text-deepred-500 mb-2"></i>
+                                    <p class="font-semibold text-sm text-gray-700">Annadaanam</p>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="cause" class="peer sr-only">
+                                <div
+                                    class="p-4 rounded-xl border-2 border-gray-200 peer-checked:border-saffron-500 peer-checked:bg-saffron-50 hover:border-saffron-300 transition-all text-center">
+                                    <i class="fa-solid fa-cow text-xl text-saffron-500 mb-2"></i>
+                                    <p class="font-semibold text-sm text-gray-700">Gau Seva</p>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="cause" class="peer sr-only">
+                                <div
+                                    class="p-4 rounded-xl border-2 border-gray-200 peer-checked:border-gold-500 peer-checked:bg-gold-50 hover:border-saffron-300 transition-all text-center">
+                                    <i class="fa-solid fa-book-open-reader text-xl text-gold-600 mb-2"></i>
+                                    <p class="font-semibold text-sm text-gray-700">Education</p>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="cause" class="peer sr-only">
+                                <div
+                                    class="p-4 rounded-xl border-2 border-gray-200 peer-checked:border-red-500 peer-checked:bg-red-50 hover:border-saffron-300 transition-all text-center">
+                                    <i class="fa-solid fa-kit-medical text-xl text-red-500 mb-2"></i>
+                                    <p class="font-semibold text-sm text-gray-700">Medical</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mb-8 p-5 bg-gray-50 rounded-2xl border border-gray-100">
+                        <label class="flex items-start space-x-3 cursor-pointer">
+                            <input type="checkbox" required class="mt-1 w-5 h-5 accent-deepred-600 rounded-lg">
+                            <span class="text-sm text-gray-600">
+                                I confirm that the above donation is voluntary and made out of my own free will. I agree
+                                to the <a href="terms-conditions.html" target="_blank" class="text-deepred-600 font-semibold underline">Terms &
+                                    Conditions</a>, <a href="privacy-policy.html" target="_blank"
+                                    class="text-deepred-600 font-semibold underline">Privacy Policy</a>, and <a href="refund-cancellation.html" target="_blank"
+                                    class="text-deepred-600 font-semibold underline">Refund Policy</a> of
+                                Dashrathnandan Shree Ram Foundation. The 80G receipt will be shared on the email/phone
+                                provided above.
+                            </span>
+                        </label>
+                    </div>
+
+                    <div
+                        class="flex flex-col sm:flex-row gap-4 items-center justify-between pt-4 border-t border-gray-100">
+                        <div>
+                            <p class="text-sm text-gray-500 flex items-center">
+                                <i class="fa-solid fa-lock text-saffron-500 mr-2"></i>
+                                Your personal information is 100% secure.
+                            </p>
+                            <p class="text-xs text-green-700 font-medium flex items-center mt-1">
+                                <i class="fa-brands fa-whatsapp mr-1.5 text-sm text-green-600"></i>
+                                Receipt request direct WhatsApp (+91 95496 23048) par send hogi.
+                            </p>
+                        </div>
+                        <button type="submit"
+                            class="btn-primary text-white px-8 sm:px-10 py-4 rounded-full font-bold text-base sm:text-lg shadow-xl flex items-center justify-center space-x-3 w-full sm:w-auto transition-all">
+                            <i class="fa-brands fa-whatsapp text-2xl text-green-300"></i>
+                            <span>Submit & Send on WhatsApp</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal & Transparency Footer -->
+    <footer id="contact"
+        class="bg-gradient-to-br from-gray-900 via-deepred-900 to-gray-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-deepred-500 via-saffron-400 to-gold-500">
+        </div>
+        <div class="pattern-overlay absolute inset-0 opacity-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10 relative">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-16">
+                <div class="lg:col-span-1">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div
+                            class="w-14 h-14 rounded-full overflow-hidden shadow-lg flex-shrink-0 border-2 border-gold-400 bg-white">
+                            <img src="logo.jpeg" alt="Dashrathnandan Shree Ram Foundation Logo"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-playfair font-bold text-xl sm:text-2xl text-white">Dashrathnandan Shree Ram
+                            </h3>
+                            <p class="text-xs text-gold-300 font-medium tracking-widest uppercase">Foundation</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        A registered charitable trust dedicated to <strong class="text-gold-300">selfless
+                            service</strong> of humanity and all living beings, guided by the divine principles of Lord
+                        Shri Ram.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="https://www.instagram.com/shree_ram_foundation._"
+                            class="w-10 h-10 bg-white/10 hover:bg-saffron-500 rounded-xl flex items-center justify-center transition-all hover:-translate-y-1"
+                            title="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@DhruvaUncut"
+                            class="w-10 h-10 bg-white/10 hover:bg-red-600 rounded-xl flex items-center justify-center transition-all hover:-translate-y-1"
+                            title="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="https://wa.me/919549623048" target="_blank"
+                            class="w-10 h-10 bg-white/10 hover:bg-green-600 rounded-xl flex items-center justify-center transition-all hover:-translate-y-1"
+                            title="Chat on WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-playfair text-xl font-bold text-white mb-6 pb-3 border-b border-white/10">
+                        Trust Registration & Legal
+                    </h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-file-contract text-gold-400 mt-1"></i>
+                            <div>
+                                <p class="text-xs text-gray-400 uppercase tracking-wider font-semibold">Trust
+                                    Registration No.</p>
+                                <p class="font-semibold text-white">U88900RJ2026NPL112929</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-certificate text-gold-400 mt-1"></i>
+                            <div>
+                                <p class="text-xs text-gray-400 uppercase tracking-wider font-semibold">Income Tax
+                                    Certifications</p>
+                                <p class="font-semibold text-white">12A & 80G Certified</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-bullseye text-gold-400 mt-1"></i>
+                            <div>
+                                <p class="text-xs text-gray-400 uppercase tracking-wider font-semibold">PAN Card
+                                    (Company / Trust)</p>
+                                <p class="font-semibold text-white tracking-wider">AAMCD5868J</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-id-card text-gold-400 mt-1"></i>
+                            <div>
+                                <p class="text-xs text-gray-400 uppercase tracking-wider font-semibold">NITI Aayog
+                                    DARPAN ID</p>
+                                <p class="font-semibold text-white">RJ/2026/1150915</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-playfair text-xl font-bold text-white mb-6 pb-3 border-b border-white/10">
+                        Registered Office & Contact
+                    </h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-location-dot text-gold-400 mt-1"></i>
+                            <div>
+                                <p class="text-xs text-gray-400 uppercase tracking-wider font-semibold mb-1">Registered
+                                    Address</p>
+                                <p class="text-gray-200 leading-relaxed text-sm">
+                                    13A, Narvar Puri Colony,<br>
+                                    Outside Gangapole Gate, Tripolia Bazar,<br>
+                                    Jaipur, Rajasthan - 302002
+                                </p>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-phone-volume text-gold-400 mt-1"></i>
+                            <div>
+                                <p class="text-xs text-gray-400 uppercase tracking-wider font-semibold mb-1">Call /
+                                    WhatsApp</p>
+                                <a href="tel:+919549623048"
+                                    class="text-white font-semibold hover:text-gold-300 transition-colors">+91 95496
+                                    23048</a><br>
+                                <a href="tel:+919982032207" class="text-white hover:text-gold-300 transition-colors">+91
+                                    99820 32207</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-envelope-open-text text-gold-400 mt-1"></i>
+                            <div>
+                                <p class="text-xs text-gray-400 uppercase tracking-wider font-semibold mb-1">Official
+                                    Email</p>
+                                <a href="mailto:dns.shreeramfoundation@gmail.com"
+                                    class="text-white font-semibold hover:text-gold-300 transition-colors break-all">dns.shreeramfoundation@gmail.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-playfair text-xl font-bold text-white mb-6 pb-3 border-b border-white/10">
+                        Quick Links
+                    </h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home"
+                                class="text-gray-300 hover:text-gold-300 transition-colors flex items-center space-x-2"><i
+                                    class="fa-solid fa-angle-right text-gold-400 text-xs"></i><span>Home</span></a></li>
+                        <li><a href="#about"
+                                class="text-gray-300 hover:text-gold-300 transition-colors flex items-center space-x-2"><i
+                                    class="fa-solid fa-angle-right text-gold-400 text-xs"></i><span>About Our
+                                    Trust</span></a></li>
+                        <li><a href="#work"
+                                class="text-gray-300 hover:text-gold-300 transition-colors flex items-center space-x-2"><i
+                                    class="fa-solid fa-angle-right text-gold-400 text-xs"></i><span>Our
+                                    Programs</span></a></li>
+                        <li><a href="#gallery"
+                                class="text-gray-300 hover:text-gold-300 transition-colors flex items-center space-x-2"><i
+                                    class="fa-solid fa-angle-right text-gold-400 text-xs"></i><span>Photo
+                                    Gallery</span></a></li>
+                        <li><a href="#donate"
+                                class="text-gray-300 hover:text-gold-300 transition-colors flex items-center space-x-2"><i
+                                    class="fa-solid fa-angle-right text-gold-400 text-xs"></i><span>Donate
+                                    Now</span></a></li>
+                        <li><a href="privacy-policy.html"
+                                class="text-gray-300 hover:text-gold-300 transition-colors flex items-center space-x-2"><i
+                                    class="fa-solid fa-angle-right text-gold-400 text-xs"></i><span>Privacy
+                                    Policy</span></a></li>
+                        <li><a href="terms-conditions.html"
+                                class="text-gray-300 hover:text-gold-300 transition-colors flex items-center space-x-2"><i
+                                    class="fa-solid fa-angle-right text-gold-400 text-xs"></i><span>Terms &
+                                    Conditions</span></a></li>
+                        <li><a href="refund-cancellation.html"
+                                class="text-gray-300 hover:text-gold-300 transition-colors flex items-center space-x-2"><i
+                                    class="fa-solid fa-angle-right text-gold-400 text-xs"></i><span>Refund &
+                                    Cancellation</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex flex-wrap justify-center md:justify-start gap-x-5 gap-y-2 text-sm text-gray-400">
+                    <a href="privacy-policy.html" class="hover:text-gold-300 transition-colors flex items-center space-x-1"><i
+                            class="fa-solid fa-shield-halved text-xs"></i><span>Privacy Policy</span></a>
+                    <span class="text-gray-600">•</span>
+                    <a href="terms-conditions.html" class="hover:text-gold-300 transition-colors flex items-center space-x-1"><i
+                            class="fa-solid fa-scale-balanced text-xs"></i><span>Terms & Conditions</span></a>
+                    <span class="text-gray-600">•</span>
+                    <a href="refund-cancellation.html" class="hover:text-gold-300 transition-colors flex items-center space-x-1"><i
+                            class="fa-solid fa-rotate-left text-xs"></i><span>Refund & Cancellation Policy</span></a>
+                </div>
+                <p class="text-sm text-gray-400 text-center md:text-right">
+                    © <span id="year"></span> <span class="text-gold-300 font-semibold">Dashrathnandan Shree Ram
+                        Foundation</span>. All
+                    rights reserved.
+                    <span class="block md:inline text-xs text-gray-500">Made with <i
+                            class="fa-solid fa-heart text-deepred-500"></i> for Mankind.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+        class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-gradient-to-br from-deepred-600 to-saffron-500 text-white shadow-2xl z-40 opacity-0 invisible transition-all duration-300 hover:-translate-y-1 flex items-center justify-center">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <div id="copyToast"
+        class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-gray-900 text-white px-5 py-3 rounded-xl shadow-2xl z-50 opacity-0 invisible transition-all duration-300 flex items-center space-x-2">
+        <i class="fa-solid fa-circle-check text-green-400"></i>
+        <span id="copyToastMsg">Copied!</span>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const menuOverlay = document.getElementById('menuOverlay');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function openMenu() {
+            mobileMenu.classList.add('active');
+            menuOverlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMenu() {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+        mobileMenuBtn.addEventListener('click', openMenu);
+        closeMenuBtn.addEventListener('click', closeMenu);
+        menuOverlay.addEventListener('click', closeMenu);
+        mobileLinks.forEach(l => l.addEventListener('click', closeMenu));
+
+        const copyToast = document.getElementById('copyToast');
+        const copyToastMsg = document.getElementById('copyToastMsg');
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                copyToastMsg.textContent = 'Copied: ' + text;
+                copyToast.classList.remove('opacity-0', 'invisible');
+                setTimeout(() => copyToast.classList.add('opacity-0', 'invisible'), 2000);
+            });
+        }
+
+        function setAmount(amt) {
+            const input = document.querySelector('input[type="number"]');
+            if (input) {
+                input.value = amt;
+                input.focus();
+                input.classList.add('ring-4', 'ring-saffron-100', 'border-saffron-500');
+                setTimeout(() => input.classList.remove('ring-4', 'ring-saffron-100', 'border-saffron-500'), 1000);
+            }
+        }
+
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 600) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+            } else {
+                backToTop.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        document.getElementById('donationForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const btn = form.querySelector('button[type="submit"]');
+            const originalHTML = btn.innerHTML;
+
+            // Extract all form values
+            const name = form.querySelector('input[placeholder*="full name"]')?.value?.trim() || '';
+            const phone = form.querySelector('input[type="tel"]')?.value?.trim() || '';
+            const email = form.querySelector('input[type="email"]')?.value?.trim() || 'Not Provided';
+            const date = form.querySelector('input[type="date"]')?.value || '';
+            const txnId = form.querySelector('input[placeholder*="UTR"]')?.value?.trim() || '';
+            const amount = form.querySelector('input[type="number"]')?.value?.trim() || '';
+            const mode = form.querySelector('select')?.value || 'UPI / Bank Transfer';
+            const pan = form.querySelector('input[placeholder*="ABCDE"]')?.value?.trim() || 'Not Provided';
+
+            // Get selected cause
+            let cause = 'Annadaanam';
+            const checkedCause = form.querySelector('input[name="cause"]:checked');
+            if (checkedCause) {
+                const labelText = checkedCause.closest('label')?.querySelector('p')?.textContent?.trim();
+                if (labelText) cause = labelText;
+            }
+
+            // Create formatted WhatsApp Message
+            const waMessage =
+                `🙏 *Donation & 80G Receipt Request*
+*Dashrathnandan Shree Ram Foundation*
+──────────────────────
+👤 *Donor Name:* ${name}
+📞 *Phone:* +91 ${phone}
+📧 *Email:* ${email}
+💰 *Amount Paid:* ₹${amount}
+💳 *Payment Mode:* ${mode}
+🔢 *UTR / Txn ID:* ${txnId}
+📅 *Donation Date:* ${date}
+🆔 *PAN Number:* ${pan}
+🎯 *Supported Cause:* ${cause}
+──────────────────────
+Pranam! Mene donation kar diya hai. Kripya meri 80G Tax Exemption Receipt generate karke WhatsApp/Email par bhej dijiye.`;
+
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin text-xl"></i><span>WhatsApp par bhej rahe hain...</span>';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                // Open WhatsApp URL to 9549623048
+                const waUrl = `https://wa.me/919549623048?text=${encodeURIComponent(waMessage)}`;
+                window.open(waUrl, '_blank');
+
+                btn.innerHTML = '<i class="fa-brands fa-whatsapp text-2xl"></i><span>WhatsApp Opened!</span>';
+                btn.classList.remove('btn-primary');
+                btn.classList.add('bg-gradient-to-r', 'from-green-600', 'to-green-700');
+
+                copyToastMsg.textContent = 'Data WhatsApp par send karne ke liye taiyar hai! Kripya send button dabayein.';
+                copyToast.classList.remove('opacity-0', 'invisible');
+
+                setTimeout(() => {
+                    form.reset();
+                    btn.innerHTML = originalHTML;
+                    btn.disabled = false;
+                    btn.classList.add('btn-primary');
+                    btn.classList.remove('bg-gradient-to-r', 'from-green-600', 'to-green-700');
+                    copyToast.classList.add('opacity-0', 'invisible');
+                }, 4000);
+            }, 800);
+        });
+
+        document.addEventListener('click', (e) => {
+            const select = e.target.closest('select');
+            if (!select) return;
+        });
+
+        // Managing Trustee Right-to-Left Auto Carousel
+        let currentTrusteeSlide = 0;
+        const totalTrusteeSlides = 2;
+        let trusteeSlideInterval = null;
+        let isTrusteeTransitioning = false;
+
+        function getTrusteeSlide(idx) {
+            return document.getElementById('trusteeSlide' + idx);
+        }
+
+        function slideRightToLeft(nextIndex) {
+            if (isTrusteeTransitioning) return;
+            if (nextIndex === currentTrusteeSlide) return;
+            isTrusteeTransitioning = true;
+
+            const outgoingSlide = getTrusteeSlide(currentTrusteeSlide);
+            const incomingSlide = getTrusteeSlide(nextIndex);
+            if (!outgoingSlide || !incomingSlide) {
+                isTrusteeTransitioning = false;
+                return;
+            }
+
+            // Position incoming slide on the right (+100%) without animation
+            incomingSlide.style.transition = 'none';
+            incomingSlide.style.transform = 'translateX(100%)';
+            incomingSlide.style.opacity = '0';
+            incomingSlide.style.zIndex = '10';
+            outgoingSlide.style.zIndex = '5';
+
+            // Force browser reflow so initial +100% position applies
+            void incomingSlide.offsetWidth;
+
+            // Animate both slides smoothly towards the left (Right to Left motion: <------)
+            const anim = 'transform 750ms cubic-bezier(0.4, 0, 0.2, 1), opacity 750ms ease';
+            outgoingSlide.style.transition = anim;
+            incomingSlide.style.transition = anim;
+
+            // Outgoing glides from 0 to -100% (towards the left)
+            outgoingSlide.style.transform = 'translateX(-100%)';
+            outgoingSlide.style.opacity = '0';
+            outgoingSlide.style.pointerEvents = 'none';
+
+            // Incoming glides from +100% to 0 (from the right into center)
+            incomingSlide.style.transform = 'translateX(0%)';
+            incomingSlide.style.opacity = '1';
+            incomingSlide.style.pointerEvents = 'auto';
+
+            currentTrusteeSlide = nextIndex;
+            updateTrusteeDots();
+
+            setTimeout(() => {
+                // Silently reset outgoing slide to +100% (waiting on the right for next turn)
+                outgoingSlide.style.transition = 'none';
+                outgoingSlide.style.transform = 'translateX(100%)';
+                isTrusteeTransitioning = false;
+            }, 800);
+        }
+
+        function updateTrusteeDots() {
+            const dots = document.querySelectorAll('.trustee-dot');
+            dots.forEach((dot, idx) => {
+                if (idx === currentTrusteeSlide) {
+                    dot.classList.add('w-8', 'bg-deepred-600');
+                    dot.classList.remove('w-2.5', 'bg-gray-300');
+                } else {
+                    dot.classList.remove('w-8', 'bg-deepred-600');
+                    dot.classList.add('w-2.5', 'bg-gray-300');
+                }
+            });
+        }
+
+        function nextTrusteeSlide() {
+            const nextIdx = (currentTrusteeSlide + 1) % totalTrusteeSlides;
+            slideRightToLeft(nextIdx);
+            resetTrusteeTimer();
+        }
+
+        function prevTrusteeSlide() {
+            const prevIdx = (currentTrusteeSlide - 1 + totalTrusteeSlides) % totalTrusteeSlides;
+            slideRightToLeft(prevIdx);
+            resetTrusteeTimer();
+        }
+
+        function goToTrusteeSlide(index) {
+            slideRightToLeft(index);
+            resetTrusteeTimer();
+        }
+
+        function startTrusteeTimer() {
+            clearInterval(trusteeSlideInterval);
+            trusteeSlideInterval = setInterval(() => {
+                const nextIdx = (currentTrusteeSlide + 1) % totalTrusteeSlides;
+                slideRightToLeft(nextIdx);
+            }, 5000); // Auto-slides every 5 seconds from Right to Left
+        }
+
+        function resetTrusteeTimer() {
+            clearInterval(trusteeSlideInterval);
+            startTrusteeTimer();
+        }
+
+        // Start auto-slide immediately on page load
+        startTrusteeTimer();
+
+        // Mobile touch swipe gestures
+        const trusteeSliderContainer = document.getElementById('trusteeSliderContainer');
+        if (trusteeSliderContainer) {
+            let touchStartX = 0;
+            let touchEndX = 0;
+            trusteeSliderContainer.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+            trusteeSliderContainer.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                if (Math.abs(touchEndX - touchStartX) > 40) {
+                    nextTrusteeSlide();
+                }
+            }, { passive: true });
+        }
+
+        // Header Hero Banner Slider Logic (Infinite Seamless Auto Slide)
+        (function () {
+            const track = document.getElementById('heroSliderTrack');
+            const prevBtn = document.getElementById('sliderPrevBtn');
+            const nextBtn = document.getElementById('sliderNextBtn');
+            const sliderSection = document.getElementById('hero-slider');
+            if (!track) return;
+
+            const totalSlides = 3; // slider2, slider3, slider4 (+1 clone for seamless loop)
+            let currentIndex = 0;
+            let isTransitioning = false;
+            let autoSlideTimer = null;
+
+            function goToSlide(index, animated = true) {
+                if (animated) {
+                    track.style.transition = 'transform 650ms cubic-bezier(0.25, 1, 0.5, 1)';
+                } else {
+                    track.style.transition = 'none';
+                }
+                track.style.transform = `translateX(-${index * 100}%)`;
+                currentIndex = index;
+            }
+
+            function nextSlide() {
+                if (isTransitioning) return;
+                isTransitioning = true;
+                currentIndex++;
+                goToSlide(currentIndex, true);
+
+                if (currentIndex === totalSlides) {
+                    setTimeout(() => {
+                        goToSlide(0, false);
+                        isTransitioning = false;
+                    }, 650);
+                } else {
+                    setTimeout(() => {
+                        isTransitioning = false;
+                    }, 650);
+                }
+            }
+
+            function prevSlide() {
+                if (isTransitioning) return;
+                isTransitioning = true;
+
+                if (currentIndex === 0) {
+                    goToSlide(totalSlides, false);
+                    void track.offsetWidth;
+                    currentIndex = totalSlides - 1;
+                    goToSlide(currentIndex, true);
+                } else {
+                    currentIndex--;
+                    goToSlide(currentIndex, true);
+                }
+
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, 650);
+            }
+
+            function startAutoSlide() {
+                clearInterval(autoSlideTimer);
+                autoSlideTimer = setInterval(() => {
+                    nextSlide();
+                }, 3500); // Auto-slides every 3.5 seconds
+            }
+
+            // Start auto-slide immediately
+            startAutoSlide();
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    nextSlide();
+                    startAutoSlide();
+                });
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    prevSlide();
+                    startAutoSlide();
+                });
+            }
+
+            // Touch Swipe for mobile
+            if (sliderSection) {
+                let touchStartX = 0;
+                let touchEndX = 0;
+                sliderSection.addEventListener('touchstart', e => {
+                    touchStartX = e.changedTouches[0].screenX;
+                }, { passive: true });
+
+                sliderSection.addEventListener('touchend', e => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    const diff = touchStartX - touchEndX;
+                    if (Math.abs(diff) > 40) {
+                        if (diff > 0) {
+                            nextSlide();
+                        } else {
+                            prevSlide();
+                        }
+                        startAutoSlide();
+                    }
+                }, { passive: true });
+            }
+        })();
+    </script>
+</body>
+
+</html>
