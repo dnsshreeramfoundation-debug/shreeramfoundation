@@ -88,7 +88,9 @@
 
         .mobile-menu {
             transform: translateX(100%);
-            transition: transform 0.3s ease;
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            background-color: #ffffff !important;
+            will-change: transform;
         }
 
         .mobile-menu.active {
@@ -118,11 +120,16 @@
 
                 <div class="hidden lg:flex items-center space-x-8">
                     <a href="index.html#home" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Home</a>
-                    <a href="index.html#about" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">About Us</a>
-                    <a href="index.html#work" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Our Work</a>
-                    <a href="index.html#gallery" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Gallery</a>
-                    <a href="index.html#donate" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Donate</a>
-                    <a href="index.html#contact" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Contact</a>
+                    <a href="index.html#about" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">About
+                        Us</a>
+                    <a href="index.html#work" class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Our
+                        Work</a>
+                    <a href="index.html#gallery"
+                        class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Gallery</a>
+                    <a href="index.html#donate"
+                        class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Donate</a>
+                    <a href="index.html#contact"
+                        class="nav-link text-gray-700 hover:text-deepred-600 font-medium">Contact</a>
                     <a href="index.html#donate"
                         class="btn-primary text-white px-6 py-2.5 rounded-full font-semibold shadow-lg flex items-center space-x-2">
                         <i class="fa-solid fa-heart"></i>
@@ -130,47 +137,101 @@
                     </a>
                 </div>
 
-                <button id="mobileMenuBtn" class="lg:hidden p-2 text-gray-700 hover:text-deepred-600">
+                <button id="mobileMenuBtn" class="lg:hidden p-2 text-gray-700 hover:text-deepred-600 focus:outline-none"
+                    aria-label="Open Menu">
                     <i class="fa-solid fa-bars text-2xl"></i>
                 </button>
             </div>
         </nav>
+    </header>
 
-        <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-72 bg-white shadow-2xl lg:hidden z-50">
-            <div class="p-6 border-b border-gray-100 flex justify-between items-center">
-                <h3 class="font-playfair font-bold text-lg gradient-text">Menu</h3>
-                <button id="closeMenuBtn" class="p-2 text-gray-500 hover:text-deepred-600">
+    <!-- Mobile Navigation Drawer Overlay (outside header) -->
+    <div id="menuOverlay"
+        class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-[9998] lg:hidden transition-opacity duration-300">
+    </div>
+
+    <!-- Mobile Navigation Drawer (100% Solid White Opaque) -->
+    <div id="mobileMenu"
+        class="mobile-menu fixed top-0 right-0 w-80 max-w-[85vw] shadow-2xl lg:hidden z-[9999] flex flex-col justify-between overflow-y-auto"
+        style="background-color: #ffffff !important; opacity: 1 !important; height: 100vh; height: 100dvh;">
+
+        <div class="flex-1 flex flex-col">
+            <!-- Drawer Header -->
+            <div class="p-5 border-b border-gray-100 flex justify-between items-center bg-white sticky top-0 z-10"
+                style="background-color: #ffffff !important;">
+                <div class="flex items-center space-x-3">
+                    <div
+                        class="w-10 h-10 rounded-full overflow-hidden shadow-md border-2 border-saffron-400 bg-white flex-shrink-0">
+                        <img src="logo.jpeg" alt="Dashrathnandan Shree Ram Foundation Logo"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="font-playfair font-bold text-base gradient-text leading-tight">Dashrathnandan</h3>
+                        <p class="text-[10px] text-gray-500 font-medium tracking-wider uppercase">Shree Ram Foundation
+                        </p>
+                    </div>
+                </div>
+                <button id="closeMenuBtn"
+                    class="w-9 h-9 rounded-full flex items-center justify-center text-gray-500 hover:text-deepred-600 hover:bg-cream-100 transition-colors focus:outline-none"
+                    aria-label="Close Menu">
                     <i class="fa-solid fa-xmark text-xl"></i>
                 </button>
             </div>
-            <div class="p-6 flex flex-col space-y-5">
+
+            <!-- Drawer Links -->
+            <div class="p-5 flex flex-col space-y-2 bg-white flex-1" style="background-color: #ffffff !important;">
                 <a href="index.html#home"
-                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
-                        class="fa-solid fa-house text-saffron-500"></i><span>Home</span></a>
-                <a href="index.html#about"
-                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
-                        class="fa-solid fa-circle-info text-saffron-500"></i><span>About Us</span></a>
-                <a href="index.html#work"
-                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
-                        class="fa-solid fa-hands-holding text-saffron-500"></i><span>Our Work</span></a>
-                <a href="index.html#gallery"
-                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
-                        class="fa-solid fa-images text-saffron-500"></i><span>Gallery</span></a>
-                <a href="index.html#donate"
-                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
-                        class="fa-solid fa-hand-holding-heart text-saffron-500"></i><span>Donate</span></a>
-                <a href="index.html#contact"
-                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
-                        class="fa-solid fa-envelope text-saffron-500"></i><span>Contact</span></a>
-                <a href="index.html#donate"
-                    class="btn-primary text-white px-6 py-3 rounded-full font-semibold text-center mt-4 flex items-center justify-center space-x-2">
-                    <i class="fa-solid fa-heart"></i>
-                    <span>Donate Now</span>
+                    class="mobile-link text-gray-700 hover:text-deepred-600 hover:bg-saffron-50/70 font-medium px-3.5 py-3 rounded-xl border-b border-gray-100/80 flex items-center space-x-3 transition-colors">
+                    <i class="fa-solid fa-house text-saffron-500 w-5 text-center text-base"></i>
+                    <span class="text-sm font-semibold">Home</span>
                 </a>
+                <a href="index.html#about"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 hover:bg-saffron-50/70 font-medium px-3.5 py-3 rounded-xl border-b border-gray-100/80 flex items-center space-x-3 transition-colors">
+                    <i class="fa-solid fa-circle-info text-saffron-500 w-5 text-center text-base"></i>
+                    <span class="text-sm font-semibold">About Us</span>
+                </a>
+                <a href="index.html#work"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 hover:bg-saffron-50/70 font-medium px-3.5 py-3 rounded-xl border-b border-gray-100/80 flex items-center space-x-3 transition-colors">
+                    <i class="fa-solid fa-hands-holding text-saffron-500 w-5 text-center text-base"></i>
+                    <span class="text-sm font-semibold">Our Work</span>
+                </a>
+                <a href="index.html#gallery"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 hover:bg-saffron-50/70 font-medium px-3.5 py-3 rounded-xl border-b border-gray-100/80 flex items-center space-x-3 transition-colors">
+                    <i class="fa-solid fa-images text-saffron-500 w-5 text-center text-base"></i>
+                    <span class="text-sm font-semibold">Gallery</span>
+                </a>
+                <a href="index.html#donate"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 hover:bg-saffron-50/70 font-medium px-3.5 py-3 rounded-xl border-b border-gray-100/80 flex items-center space-x-3 transition-colors">
+                    <i class="fa-solid fa-hand-holding-heart text-saffron-500 w-5 text-center text-base"></i>
+                    <span class="text-sm font-semibold">Donate</span>
+                </a>
+                <a href="index.html#contact"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 hover:bg-saffron-50/70 font-medium px-3.5 py-3 rounded-xl border-b border-gray-100/80 flex items-center space-x-3 transition-colors">
+                    <i class="fa-solid fa-envelope text-saffron-500 w-5 text-center text-base"></i>
+                    <span class="text-sm font-semibold">Contact</span>
+                </a>
+
+                <div class="pt-4 mt-auto">
+                    <a href="index.html#donate"
+                        class="btn-primary text-white px-5 py-3.5 rounded-full font-semibold text-center flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transition-all">
+                        <i class="fa-solid fa-heart text-white"></i>
+                        <span>Donate Now</span>
+                    </a>
+                </div>
             </div>
         </div>
-        <div id="menuOverlay" class="hidden fixed inset-0 bg-black/40 z-40 lg:hidden"></div>
-    </header>
+
+        <!-- Drawer Footer / Helpline -->
+        <div class="p-5 border-t border-gray-100 bg-cream-50" style="background-color: #FFFDF9 !important;">
+            <p class="text-[11px] text-gray-500 font-semibold uppercase tracking-wider mb-2">Need Help or Support?</p>
+            <a href="tel:+919549623048"
+                class="flex items-center space-x-2.5 text-sm text-gray-800 hover:text-deepred-600 font-bold mb-1">
+                <i class="fa-solid fa-phone text-saffron-500 text-xs"></i>
+                <span>+91 9549623048</span>
+            </a>
+            <p class="text-[11px] text-gray-400 mt-2">© 2026 Dashrathnandan Shree Ram Foundation</p>
+        </div>
+    </div>
 
     <!-- Page Title & Breadcrumb -->
     <div class="pt-28 pb-10 bg-gradient-to-r from-deepred-900 via-deepred-800 to-saffron-800 text-white">
@@ -181,22 +242,28 @@
                 <span class="text-white font-medium">Terms & Conditions</span>
             </nav>
             <h1 class="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold mb-2">Terms & Conditions</h1>
-            <p class="text-white/80 text-sm sm:text-base">Rules, guidelines, and legal terms governing the use of Dashrathnandan Shree Ram Foundation platform</p>
+            <p class="text-white/80 text-sm sm:text-base">Rules, guidelines, and legal terms governing the use of
+                Dashrathnandan Shree Ram Foundation platform</p>
         </div>
     </div>
 
     <!-- Main Content Container -->
     <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-gray-100 space-y-8 text-gray-700 leading-relaxed text-sm sm:text-base">
+        <div
+            class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-gray-100 space-y-8 text-gray-700 leading-relaxed text-sm sm:text-base">
 
             <!-- Organization Badge -->
-            <div class="bg-gradient-to-r from-saffron-50 via-cream-50 to-deepred-50 p-5 rounded-2xl border border-saffron-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div
+                class="bg-gradient-to-r from-saffron-50 via-cream-50 to-deepred-50 p-5 rounded-2xl border border-saffron-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div>
                     <h3 class="font-bold text-gray-900 text-lg">Dashrathnandan Shree Ram Foundation</h3>
-                    <p class="text-xs sm:text-sm text-gray-600 mt-1">Section 8 Non-Profit Company (Companies Act, 2013 | MCA Govt. of India)</p>
-                    <p class="text-xs text-gray-500 font-mono mt-0.5">CIN: U88900RJ2026NPL112929 | PAN: AAMCD5868J | NITI Aayog: RJ/2026/1150915</p>
+                    <p class="text-xs sm:text-sm text-gray-600 mt-1">Section 8 Non-Profit Company (Companies Act, 2013 |
+                        MCA Govt. of India)</p>
+                    <p class="text-xs text-gray-500 font-mono mt-0.5">CIN: U88900RJ2026NPL112929 | PAN: AAMCD5868J |
+                        NITI Aayog: RJ/2026/1150915</p>
                 </div>
-                <div class="inline-flex items-center px-3.5 py-1.5 rounded-full bg-saffron-100 text-saffron-800 text-xs font-semibold">
+                <div
+                    class="inline-flex items-center px-3.5 py-1.5 rounded-full bg-saffron-100 text-saffron-800 text-xs font-semibold">
                     <i class="fa-solid fa-scale-balanced mr-1.5"></i> Governing Terms
                 </div>
             </div>
@@ -204,99 +271,130 @@
             <!-- Section 1 -->
             <section class="space-y-3">
                 <h2 class="font-playfair text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
-                    <span class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">1</span>
+                    <span
+                        class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">1</span>
                     Acceptance of Terms
                 </h2>
                 <p>
-                    Welcome to the official website of <strong>Dashrathnandan Shree Ram Foundation</strong>. By accessing or browsing this website, participating in our social welfare programs, or making voluntary donations, you agree to be bound by these Terms and Conditions and our Privacy and Refund policies.
+                    Welcome to the official website of <strong>Dashrathnandan Shree Ram Foundation</strong>. By
+                    accessing or browsing this website, participating in our social welfare programs, or making
+                    voluntary donations, you agree to be bound by these Terms and Conditions and our Privacy and Refund
+                    policies.
                 </p>
                 <p>
-                    If you do not agree with any part of these terms, please refrain from using our website or submitting contributions through our donation channels.
+                    If you do not agree with any part of these terms, please refrain from using our website or
+                    submitting contributions through our donation channels.
                 </p>
             </section>
 
             <!-- Section 2 -->
             <section class="space-y-3">
                 <h2 class="font-playfair text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
-                    <span class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">2</span>
+                    <span
+                        class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">2</span>
                     Nature of Charitable Contributions
                 </h2>
                 <p>
-                    All monetary contributions made to Dashrathnandan Shree Ram Foundation are purely voluntary donations made out of compassion and goodwill without any expectation of commercial exchange, goods, services, or personal favors in return.
+                    All monetary contributions made to Dashrathnandan Shree Ram Foundation are purely voluntary
+                    donations made out of compassion and goodwill without any expectation of commercial exchange, goods,
+                    services, or personal favors in return.
                 </p>
                 <p>
                     Donated funds are allocated exclusively toward our registered non-profit charitable activities:
                 </p>
                 <ul class="list-disc pl-6 space-y-1.5 text-gray-600">
-                    <li><strong>Annadaanam:</strong> Free satvik food distribution, daily langars, and seasonal bhandaras for slum children and the needy.</li>
-                    <li><strong>Gaushala & Animal Welfare:</strong> Fodder, veterinary medical treatment, rescue, and shelter for cows and street animals.</li>
-                    <li><strong>Child Education:</strong> Distribution of educational supplies, notebooks, stationery, and learning support for underprivileged children.</li>
-                    <li><strong>Medical Assistance:</strong> Free health checkup camps, essential medicines, and patient support.</li>
+                    <li><strong>Annadaanam:</strong> Free satvik food distribution, daily langars, and seasonal
+                        bhandaras for slum children and the needy.</li>
+                    <li><strong>Gaushala & Animal Welfare:</strong> Fodder, veterinary medical treatment, rescue, and
+                        shelter for cows and street animals.</li>
+                    <li><strong>Child Education:</strong> Distribution of educational supplies, notebooks, stationery,
+                        and learning support for underprivileged children.</li>
+                    <li><strong>Medical Assistance:</strong> Free health checkup camps, essential medicines, and patient
+                        support.</li>
                 </ul>
             </section>
 
             <!-- Section 3 -->
             <section class="space-y-3">
                 <h2 class="font-playfair text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
-                    <span class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">3</span>
+                    <span
+                        class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">3</span>
                     Donation Receipts & 80G Tax Exemption
                 </h2>
                 <ul class="list-disc pl-6 space-y-2 text-gray-600">
-                    <li>An official digital donation receipt is generated and issued for every verified donation received by our Foundation.</li>
-                    <li>To claim tax deductions under <strong>Section 80G</strong> of the Income Tax Act, 1961, the donor must provide a valid Permanent Account Number (PAN) at the time of donation submission.</li>
-                    <li>In accordance with Central Board of Direct Taxes (CBDT) notifications, donor PAN data is filed annually in Form 10BD, enabling donors to download their official Form 10BE tax certificate directly from the Income Tax e-filing portal.</li>
-                    <li>The Foundation bears no responsibility for rejected tax exemption claims resulting from incorrect PAN or donor name information supplied by the donor.</li>
+                    <li>An official digital donation receipt is generated and issued for every verified donation
+                        received by our Foundation.</li>
+                    <li>To claim tax deductions under <strong>Section 80G</strong> of the Income Tax Act, 1961, the
+                        donor must provide a valid Permanent Account Number (PAN) at the time of donation submission.
+                    </li>
+                    <li>In accordance with Central Board of Direct Taxes (CBDT) notifications, donor PAN data is filed
+                        annually in Form 10BD, enabling donors to download their official Form 10BE tax certificate
+                        directly from the Income Tax e-filing portal.</li>
+                    <li>The Foundation bears no responsibility for rejected tax exemption claims resulting from
+                        incorrect PAN or donor name information supplied by the donor.</li>
                 </ul>
             </section>
 
             <!-- Section 4 -->
             <section class="space-y-3">
                 <h2 class="font-playfair text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
-                    <span class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">4</span>
+                    <span
+                        class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">4</span>
                     Intellectual Property Rights
                 </h2>
                 <p>
-                    All content on this website, including texts, photographs of social drives, videos, logos, graphics, and branding emblems, is the intellectual property of Dashrathnandan Shree Ram Foundation.
+                    All content on this website, including texts, photographs of social drives, videos, logos, graphics,
+                    and branding emblems, is the intellectual property of Dashrathnandan Shree Ram Foundation.
                 </p>
                 <p>
-                    Unauthorized copying, reproduction, distribution, or commercial exploitation of any material without our explicit written permission is strictly prohibited.
+                    Unauthorized copying, reproduction, distribution, or commercial exploitation of any material without
+                    our explicit written permission is strictly prohibited.
                 </p>
             </section>
 
             <!-- Section 5 -->
             <section class="space-y-3">
                 <h2 class="font-playfair text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
-                    <span class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">5</span>
+                    <span
+                        class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">5</span>
                     Prohibited Activities
                 </h2>
                 <p>Users of this website agree not to:</p>
                 <ul class="list-disc pl-6 space-y-1.5 text-gray-600">
-                    <li>Use this website or our name for fraudulent fundraising or unauthorized third-party collections.</li>
+                    <li>Use this website or our name for fraudulent fundraising or unauthorized third-party collections.
+                    </li>
                     <li>Submit forged, stolen, or false transaction/UTR IDs in donation verification forms.</li>
-                    <li>Interfere with website server security, deploy harmful scripts, or overload payment channels.</li>
+                    <li>Interfere with website server security, deploy harmful scripts, or overload payment channels.
+                    </li>
                 </ul>
             </section>
 
             <!-- Section 6 -->
             <section class="space-y-3">
                 <h2 class="font-playfair text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
-                    <span class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">6</span>
+                    <span
+                        class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">6</span>
                     Governing Law & Legal Jurisdiction
                 </h2>
                 <p>
-                    These Terms and Conditions shall be governed by and construed in accordance with the laws of the Republic of India. Any legal dispute, controversy, or claim arising out of or relating to this website or donations shall be subject to the exclusive jurisdiction of the competent courts in <strong>Jaipur, Rajasthan, India</strong>.
+                    These Terms and Conditions shall be governed by and construed in accordance with the laws of the
+                    Republic of India. Any legal dispute, controversy, or claim arising out of or relating to this
+                    website or donations shall be subject to the exclusive jurisdiction of the competent courts in
+                    <strong>Jaipur, Rajasthan, India</strong>.
                 </p>
             </section>
 
             <!-- Section 7 -->
             <section class="space-y-3">
                 <h2 class="font-playfair text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
-                    <span class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">7</span>
+                    <span
+                        class="w-8 h-8 rounded-lg bg-deepred-100 text-deepred-600 inline-flex items-center justify-center text-sm mr-3">7</span>
                     Registered Office & Legal Inquiries
                 </h2>
                 <div class="bg-gray-50 p-5 rounded-2xl border border-gray-200 text-sm space-y-1.5">
                     <p><strong>Dashrathnandan Shree Ram Foundation</strong></p>
-                    <p><i class="fa-solid fa-location-dot text-deepred-600 mr-2"></i> 13A, Narvar Puri Colony, Outside Gangapole Gate, Tripolia Bazar, Jaipur, Rajasthan - 302002</p>
+                    <p><i class="fa-solid fa-location-dot text-deepred-600 mr-2"></i> 13A, Narvar Puri Colony, Outside
+                        Gangapole Gate, Tripolia Bazar, Jaipur, Rajasthan - 302002</p>
                     <p><i class="fa-solid fa-phone text-saffron-600 mr-2"></i> +91 95496 23048 / +91 99820 32207</p>
                     <p><i class="fa-solid fa-envelope text-gold-600 mr-2"></i> dns.shreeramfoundation@gmail.com</p>
                 </div>
@@ -306,16 +404,19 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-b from-[#3a0d12] via-[#24080b] to-[#150406] text-white pt-12 pb-8 border-t border-deepred-900 mt-auto">
+    <footer
+        class="bg-gradient-to-b from-[#3a0d12] via-[#24080b] to-[#150406] text-white pt-12 pb-8 border-t border-deepred-900 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-                <p>© <span id="year">2026</span> <strong class="text-gold-300">Dashrathnandan Shree Ram Foundation</strong>. All rights reserved.</p>
+                <p>© <span id="year">2026</span> <strong class="text-gold-300">Dashrathnandan Shree Ram
+                        Foundation</strong>. All rights reserved.</p>
                 <div class="flex items-center space-x-4">
                     <a href="privacy-policy.html" class="hover:text-gold-300 transition-colors">Privacy Policy</a>
                     <span>•</span>
                     <a href="terms-conditions.html" class="text-gold-300 underline font-medium">Terms & Conditions</a>
                     <span>•</span>
-                    <a href="refund-cancellation.html" class="hover:text-gold-300 transition-colors">Refund & Cancellation</a>
+                    <a href="refund-cancellation.html" class="hover:text-gold-300 transition-colors">Refund &
+                        Cancellation</a>
                 </div>
             </div>
         </div>

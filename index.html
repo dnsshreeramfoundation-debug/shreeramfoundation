@@ -199,7 +199,9 @@
 
         .mobile-menu {
             transform: translateX(100%);
-            transition: transform 0.3s ease;
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            background-color: #ffffff !important;
+            will-change: transform;
         }
 
         .mobile-menu.active {
@@ -241,47 +243,101 @@
                     </a>
                 </div>
 
-                <button id="mobileMenuBtn" class="lg:hidden p-2 text-gray-700 hover:text-deepred-600">
+                <button id="mobileMenuBtn" class="lg:hidden p-2 text-gray-700 hover:text-deepred-600 focus:outline-none"
+                    aria-label="Open Menu">
                     <i class="fa-solid fa-bars text-2xl"></i>
                 </button>
             </div>
         </nav>
+    </header>
 
-        <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-72 bg-white shadow-2xl lg:hidden z-50">
-            <div class="p-6 border-b border-gray-100 flex justify-between items-center">
-                <h3 class="font-playfair font-bold text-lg gradient-text">Menu</h3>
-                <button id="closeMenuBtn" class="p-2 text-gray-500 hover:text-deepred-600">
+    <!-- Mobile Navigation Drawer Overlay (placed outside header to prevent backdrop-blur containment) -->
+    <div id="menuOverlay"
+        class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-[9998] lg:hidden transition-opacity duration-300">
+    </div>
+
+    <!-- Mobile Navigation Drawer (100% Solid White Opaque) -->
+    <div id="mobileMenu"
+        class="mobile-menu fixed top-0 right-0 w-80 max-w-[85vw] shadow-2xl lg:hidden z-[9999] flex flex-col justify-between overflow-y-auto"
+        style="background-color: #ffffff !important; opacity: 1 !important; height: 100vh; height: 100dvh;">
+
+        <div class="flex-1 flex flex-col">
+            <!-- Drawer Header -->
+            <div class="p-5 border-b border-gray-100 flex justify-between items-center bg-white sticky top-0 z-10"
+                style="background-color: #ffffff !important;">
+                <div class="flex items-center space-x-3">
+                    <div
+                        class="w-10 h-10 rounded-full overflow-hidden shadow-md border-2 border-saffron-400 bg-white flex-shrink-0">
+                        <img src="logo.jpeg" alt="Dashrathnandan Shree Ram Foundation Logo"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="font-playfair font-bold text-base gradient-text leading-tight">Dashrathnandan</h3>
+                        <p class="text-[10px] text-gray-500 font-medium tracking-wider uppercase">Shree Ram Foundation
+                        </p>
+                    </div>
+                </div>
+                <button id="closeMenuBtn"
+                    class="w-9 h-9 rounded-full flex items-center justify-center text-gray-500 hover:text-deepred-600 hover:bg-cream-100 transition-colors focus:outline-none"
+                    aria-label="Close Menu">
                     <i class="fa-solid fa-xmark text-xl"></i>
                 </button>
             </div>
-            <div class="p-6 flex flex-col space-y-5">
+
+            <!-- Drawer Links -->
+            <div class="p-5 flex flex-col space-y-2 bg-white flex-1" style="background-color: #ffffff !important;">
                 <a href="#home"
-                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
-                        class="fa-solid fa-house text-saffron-500"></i><span>Home</span></a>
-                <a href="#about"
-                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
-                        class="fa-solid fa-circle-info text-saffron-500"></i><span>About Us</span></a>
-                <a href="#work"
-                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
-                        class="fa-solid fa-hands-holding text-saffron-500"></i><span>Our Work</span></a>
-                <a href="#gallery"
-                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
-                        class="fa-solid fa-images text-saffron-500"></i><span>Gallery</span></a>
-                <a href="#donate"
-                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
-                        class="fa-solid fa-hand-holding-heart text-saffron-500"></i><span>Donate</span></a>
-                <a href="#contact"
-                    class="mobile-link text-gray-700 hover:text-deepred-600 font-medium py-2 border-b border-gray-50 flex items-center space-x-3"><i
-                        class="fa-solid fa-envelope text-saffron-500"></i><span>Contact</span></a>
-                <a href="#donate"
-                    class="btn-primary text-white px-6 py-3 rounded-full font-semibold text-center mt-4 flex items-center justify-center space-x-2">
-                    <i class="fa-solid fa-heart"></i>
-                    <span>Donate Now</span>
+                    class="mobile-link text-gray-700 hover:text-deepred-600 hover:bg-saffron-50/70 font-medium px-3.5 py-3 rounded-xl border-b border-gray-100/80 flex items-center space-x-3 transition-colors">
+                    <i class="fa-solid fa-house text-saffron-500 w-5 text-center text-base"></i>
+                    <span class="text-sm font-semibold">Home</span>
                 </a>
+                <a href="#about"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 hover:bg-saffron-50/70 font-medium px-3.5 py-3 rounded-xl border-b border-gray-100/80 flex items-center space-x-3 transition-colors">
+                    <i class="fa-solid fa-circle-info text-saffron-500 w-5 text-center text-base"></i>
+                    <span class="text-sm font-semibold">About Us</span>
+                </a>
+                <a href="#work"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 hover:bg-saffron-50/70 font-medium px-3.5 py-3 rounded-xl border-b border-gray-100/80 flex items-center space-x-3 transition-colors">
+                    <i class="fa-solid fa-hands-holding text-saffron-500 w-5 text-center text-base"></i>
+                    <span class="text-sm font-semibold">Our Work</span>
+                </a>
+                <a href="#gallery"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 hover:bg-saffron-50/70 font-medium px-3.5 py-3 rounded-xl border-b border-gray-100/80 flex items-center space-x-3 transition-colors">
+                    <i class="fa-solid fa-images text-saffron-500 w-5 text-center text-base"></i>
+                    <span class="text-sm font-semibold">Gallery</span>
+                </a>
+                <a href="#donate"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 hover:bg-saffron-50/70 font-medium px-3.5 py-3 rounded-xl border-b border-gray-100/80 flex items-center space-x-3 transition-colors">
+                    <i class="fa-solid fa-hand-holding-heart text-saffron-500 w-5 text-center text-base"></i>
+                    <span class="text-sm font-semibold">Donate</span>
+                </a>
+                <a href="#contact"
+                    class="mobile-link text-gray-700 hover:text-deepred-600 hover:bg-saffron-50/70 font-medium px-3.5 py-3 rounded-xl border-b border-gray-100/80 flex items-center space-x-3 transition-colors">
+                    <i class="fa-solid fa-envelope text-saffron-500 w-5 text-center text-base"></i>
+                    <span class="text-sm font-semibold">Contact</span>
+                </a>
+
+                <div class="pt-4 mt-auto">
+                    <a href="#donate"
+                        class="btn-primary text-white px-5 py-3.5 rounded-full font-semibold text-center flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transition-all">
+                        <i class="fa-solid fa-heart text-white"></i>
+                        <span>Donate Now</span>
+                    </a>
+                </div>
             </div>
         </div>
-        <div id="menuOverlay" class="hidden fixed inset-0 bg-black/40 z-40 lg:hidden"></div>
-    </header>
+
+        <!-- Drawer Footer / Helpline -->
+        <div class="p-5 border-t border-gray-100 bg-cream-50" style="background-color: #FFFDF9 !important;">
+            <p class="text-[11px] text-gray-500 font-semibold uppercase tracking-wider mb-2">Need Help or Support?</p>
+            <a href="tel:+919549623048"
+                class="flex items-center space-x-2.5 text-sm text-gray-800 hover:text-deepred-600 font-bold mb-1">
+                <i class="fa-solid fa-phone text-saffron-500 text-xs"></i>
+                <span>+91 9549623048</span>
+            </a>
+            <p class="text-[11px] text-gray-400 mt-2">© 2026 Dashrathnandan Shree Ram Foundation</p>
+        </div>
+    </div>
 
     <!-- Header Hero Slider Section -->
     <section id="hero-slider" class="relative pt-20 bg-cream-100 overflow-hidden select-none">
@@ -575,7 +631,7 @@
                                 <div class="relative">
                                     <div
                                         class="w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-gradient-to-br from-deepred-500 via-gold-400 to-saffron-400 p-1 shadow-xl">
-                                        <img src="trsty2.png" alt="Vaibhav Sharma - Co-Founder & Managing Trustee"
+                                        <img src="trsty2.png" alt="Vaibhav Sharma - Founder & Co-Chairman"
                                             class="w-full h-full rounded-full object-cover">
                                     </div>
                                     <div
@@ -1413,9 +1469,11 @@
                             <input type="checkbox" required class="mt-1 w-5 h-5 accent-deepred-600 rounded-lg">
                             <span class="text-sm text-gray-600">
                                 I confirm that the above donation is voluntary and made out of my own free will. I agree
-                                to the <a href="terms-conditions.html" target="_blank" class="text-deepred-600 font-semibold underline">Terms &
+                                to the <a href="terms-conditions.html" target="_blank"
+                                    class="text-deepred-600 font-semibold underline">Terms &
                                     Conditions</a>, <a href="privacy-policy.html" target="_blank"
-                                    class="text-deepred-600 font-semibold underline">Privacy Policy</a>, and <a href="refund-cancellation.html" target="_blank"
+                                    class="text-deepred-600 font-semibold underline">Privacy Policy</a>, and <a
+                                    href="refund-cancellation.html" target="_blank"
                                     class="text-deepred-600 font-semibold underline">Refund Policy</a> of
                                 Dashrathnandan Shree Ram Foundation. The 80G receipt will be shared on the email/phone
                                 provided above.
@@ -1615,13 +1673,16 @@
 
             <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <div class="flex flex-wrap justify-center md:justify-start gap-x-5 gap-y-2 text-sm text-gray-400">
-                    <a href="privacy-policy.html" class="hover:text-gold-300 transition-colors flex items-center space-x-1"><i
+                    <a href="privacy-policy.html"
+                        class="hover:text-gold-300 transition-colors flex items-center space-x-1"><i
                             class="fa-solid fa-shield-halved text-xs"></i><span>Privacy Policy</span></a>
                     <span class="text-gray-600">•</span>
-                    <a href="terms-conditions.html" class="hover:text-gold-300 transition-colors flex items-center space-x-1"><i
+                    <a href="terms-conditions.html"
+                        class="hover:text-gold-300 transition-colors flex items-center space-x-1"><i
                             class="fa-solid fa-scale-balanced text-xs"></i><span>Terms & Conditions</span></a>
                     <span class="text-gray-600">•</span>
-                    <a href="refund-cancellation.html" class="hover:text-gold-300 transition-colors flex items-center space-x-1"><i
+                    <a href="refund-cancellation.html"
+                        class="hover:text-gold-300 transition-colors flex items-center space-x-1"><i
                             class="fa-solid fa-rotate-left text-xs"></i><span>Refund & Cancellation Policy</span></a>
                 </div>
                 <p class="text-sm text-gray-400 text-center md:text-right">
